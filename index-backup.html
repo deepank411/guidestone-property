@@ -354,7 +354,7 @@
     #hero .hero-bg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1514395462725-fb4566210144?w=1920&q=80') center/cover no-repeat;
       animation: heroKenBurns 20s ease-in-out infinite alternate;
       z-index: 0;
     }
@@ -407,6 +407,16 @@
       justify-content: center;
     }
     #hero .hero-buttons .btn-primary { padding: 18px 40px; }
+    #hero .hero-trust {
+      margin-top: 32px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #hero .hero-trust i { color: var(--color-primary-accent); }
     #hero .scroll-indicator {
       position: absolute;
       bottom: 30px;
@@ -424,20 +434,6 @@
       50% { transform: translateX(-50%) translateY(10px); }
     }
 
-    /* Brand Story */
-    #brand-story { background: var(--color-white); }
-    #brand-story .brand-story-inner { max-width: 800px; margin: 0 auto; text-align: center; }
-    #brand-story .brand-icon { color: var(--color-primary-accent); font-size: 40px; margin-bottom: 20px; }
-    #brand-story .brand-paragraph { font-family: var(--font-body); color: var(--color-secondary); line-height: 1.7; font-size: 17px; max-width: 800px; margin: 0 auto 20px auto; }
-    #brand-story .brand-paragraph:last-child { margin-bottom: 0; }
-    @media (max-width: 768px) {
-      #brand-story .brand-paragraph { font-size: 16px; }
-      #brand-story .brand-icon { font-size: 32px; }
-    }
-    @media (max-width: 480px) {
-      #brand-story .brand-paragraph { font-size: 15px; }
-    }
-
     /* Stats Bar */
     #stats {
       background: var(--color-primary-dark);
@@ -447,7 +443,7 @@
     }
     #stats .stats-grid {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       max-width: var(--content-max-width);
       margin: 0 auto;
@@ -460,6 +456,7 @@
       text-align: center;
       flex: 1;
     }
+    #stats .stat-item:not(:last-child) { border-right: 1px solid rgba(200, 164, 92, 0.3); }
     #stats .stat-number {
       font-family: var(--font-heading);
       font-size: 48px;
@@ -513,6 +510,8 @@
       #stats { padding: 40px 0; }
     }
     @media (max-width: 768px) {
+      #stats .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+      #stats .stat-item:not(:last-child) { border-right: none; }
       #stats .stat-number { font-size: 36px; }
     }
     @media (max-width: 480px) {
@@ -573,32 +572,6 @@
     }
 
     /* ================================================
-       Property Pathway
-       ================================================ */
-    #pathway { background: var(--color-white); }
-    #pathway .pathway-header { text-align: center; margin-bottom: 60px; }
-    #pathway .pathway-header .section-heading { max-width: 700px; margin: 0 auto 20px auto; }
-    #pathway .pathway-header .section-subtext { margin: 0 auto; }
-    #pathway .pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    #pathway .pathway-card { background: var(--color-bg-light); border-radius: 16px; box-shadow: var(--shadow-card); padding: 36px 28px; text-align: center; transition: transform var(--transition-default), box-shadow var(--transition-default), border-left-color var(--transition-default); border-left: 4px solid transparent; }
-    #pathway .pathway-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card-hover); border-left-color: var(--color-primary-accent); }
-    #pathway .pathway-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--color-white); font-size: 22px; }
-    #pathway .pathway-step-name { font-family: var(--font-body); font-size: 20px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 4px; }
-    #pathway .pathway-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--color-muted); margin-bottom: 12px; }
-    #pathway .pathway-desc { font-family: var(--font-body); font-size: 15px; color: var(--color-secondary); line-height: 1.6; margin: 0; }
-    @media (max-width: 1024px) {
-      #pathway .pathway-grid { grid-template-columns: repeat(2, 1fr); }
-      #pathway .pathway-card { padding: 30px 24px; }
-    }
-    @media (max-width: 768px) {
-      #pathway .pathway-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
-    }
-    @media (max-width: 480px) {
-      #pathway .pathway-card { padding: 24px 20px; }
-      #pathway .pathway-step-name { font-size: 18px; }
-    }
-
-    /* ================================================
        SECTION 04 — Guidestone Method Timeline
        ================================================ */
     #method { background: var(--color-primary-dark); overflow: hidden; }
@@ -655,13 +628,14 @@
        ================================================ */
     #coverage { background: var(--color-white); }
     #coverage .coverage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
-    #coverage .coverage-card { background: var(--color-bg-light); border-radius: 16px; padding: 24px 20px; text-align: center; transition: var(--transition-default); border-bottom: 3px solid transparent; position: relative; }
+    #coverage .coverage-card { background: var(--color-bg-light); border-radius: 16px; padding: 32px 24px; text-align: center; transition: var(--transition-default); border-bottom: 3px solid transparent; position: relative; }
     #coverage .coverage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-bottom: 3px solid var(--color-primary-accent); }
     #coverage .coverage-card-icon { position: relative; display: inline-block; margin-bottom: 12px; }
     #coverage .coverage-card-icon i { color: var(--color-primary-accent); font-size: 28px; position: relative; z-index: 1; }
     #coverage .coverage-card-icon::before { content: ''; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; background: var(--color-primary-accent); border-radius: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0.5); animation: coveragePulse 2.5s ease-in-out infinite; z-index: 0; }
     @keyframes coveragePulse { 0% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.5); } 50% { opacity: 0; transform: translate(-50%, -50%) scale(1.3); } 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.5); } }
     #coverage .coverage-card-state { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 4px; }
+    #coverage .coverage-card-cities { font-family: var(--font-body); font-size: 14px; color: var(--color-muted); line-height: 1.5; }
     #coverage .coverage-subtext { margin: 0 auto 60px auto; }
 
     #founder { background: var(--color-bg-light); }
@@ -715,10 +689,34 @@
     #values .value-card-title { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--color-white); margin: 0 0 8px 0; }
     #values .value-card-desc { font-family: var(--font-body); font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.5; margin: 0; }
 
+    #testimonials { background: var(--color-white); }
+    #testimonials .testimonials-header { text-align: center; margin-bottom: 48px; }
+    #testimonials .carousel-wrapper { position: relative; max-width: 800px; margin: 0 auto; overflow: hidden; }
+    #testimonials .carousel-viewport { overflow: hidden; }
+    #testimonials .carousel-track { display: flex; transition: transform 0.5s ease; }
+    #testimonials .carousel-slide { min-width: 100%; flex-shrink: 0; text-align: center; padding: 40px 20px; }
+    #testimonials .slide-quote-icon { color: var(--color-primary-accent); font-size: 40px; opacity: 0.4; margin-bottom: 20px; }
+    #testimonials .slide-stars { display: flex; justify-content: center; gap: 4px; margin-bottom: 24px; }
+    #testimonials .slide-stars i { color: var(--color-primary-accent); font-size: 16px; }
+    #testimonials .slide-quote { font-family: var(--font-heading); font-size: 22px; font-style: italic; color: var(--color-secondary); line-height: 1.6; max-width: 600px; margin: 0 auto 28px; }
+    #testimonials .slide-name { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--color-primary-dark); margin: 0 0 4px 0; }
+    #testimonials .slide-type { font-family: var(--font-body); font-size: 14px; color: var(--color-muted); margin: 0; }
+    #testimonials .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    #testimonials .carousel-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--color-muted); opacity: 0.3; border: none; padding: 0; cursor: pointer; transition: var(--transition-default); }
+    #testimonials .carousel-dot.active { background: var(--color-primary-accent); opacity: 1; }
+    #testimonials .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(107, 123, 141, 0.3); background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: var(--transition-default); z-index: 2; }
+    #testimonials .carousel-arrow i { color: var(--color-muted); font-size: 14px; transition: var(--transition-default); }
+    #testimonials .carousel-arrow:hover { border-color: var(--color-primary-accent); }
+    #testimonials .carousel-arrow:hover i { color: var(--color-primary-accent); }
+    #testimonials .carousel-arrow--prev { left: -60px; }
+    #testimonials .carousel-arrow--next { right: -60px; }
 
     @media (max-width: 1024px) {
       #values .value-card { flex-basis: 33.333%; }
       #values .value-card:nth-child(3n) { border-right: none; }
+      #testimonials .carousel-arrow--prev { left: 0; }
+      #testimonials .carousel-arrow--next { right: 0; }
+      #testimonials .carousel-wrapper { padding: 0 52px; }
     }
     @media (max-width: 768px) {
       #values { padding: 60px 0; }
@@ -727,10 +725,16 @@
       #values .value-card:last-child { border-bottom: none; }
       #values .values-scroll-wrapper::after { display: none; }
       #values .section-heading { font-size: 32px; }
+      #testimonials .slide-quote { font-size: 18px; }
+      #testimonials .section-heading { font-size: 32px; }
+      #testimonials .carousel-arrow { display: none; }
     }
     @media (max-width: 480px) {
       #values { padding: 48px 0; }
       #values .value-card { flex-basis: 100%; padding: 24px 20px; }
+      #testimonials .slide-quote { font-size: 16px; }
+      #testimonials .carousel-slide { padding: 24px 8px; }
+      #testimonials .slide-quote-icon { font-size: 28px; margin-bottom: 12px; }
     }
 
     /* ================================================
@@ -768,7 +772,7 @@
     /* ================================================
        SECTION 08 — CTA + Footer
        ================================================ */
-    #cta { position: relative; background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover fixed no-repeat; padding: 120px 0; overflow: hidden; }
+    #cta { position: relative; background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80') center/cover fixed no-repeat; padding: 120px 0; overflow: hidden; }
     #cta::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,35,50,0.9) 0%, rgba(26,35,50,0.75) 100%); z-index: 1; }
     #cta .container { position: relative; z-index: 2; }
     #cta .cta-content { max-width: 700px; margin: 0 auto; text-align: center; }
@@ -892,24 +896,13 @@
           <a href="#contact" class="btn-primary">Book a Free Strategy Call</a>
           <a href="#method" class="btn-secondary">See How We Work</a>
         </div>
+        <p class="hero-trust">
+          <i class="fas fa-map-marker-alt"></i>
+          Trusted by 100+ clients across VIC, NSW, QLD, SA, WA &amp; NT
+        </p>
       </div>
       <div class="scroll-indicator">
         <i class="fas fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- ================================================
-         Brand Story
-         ================================================ -->
-    <section id="brand-story" class="section">
-      <div class="container">
-        <div class="brand-story-inner">
-          <div class="brand-icon fade-in-up"><i class="fas fa-house-chimney"></i></div>
-          <p class="overline fade-in-up">OUR PURPOSE</p>
-          <h2 class="section-heading fade-in-up">Why Guidestone Property Exists</h2>
-          <p class="brand-paragraph fade-in-up">Property decisions shape financial futures — but the path is often unclear and stressful. Guidestone Property was created to bring structure, insight, and confidence to that journey. Like a guiding marker that shows the way forward, we help our clients move with clarity, strategy, and certainty toward long-term wealth.</p>
-          <p class="brand-paragraph fade-in-up">We are more than a buyers agency — we are your strategic partner, dedicated to helping you navigate the property market with confidence and achieve long-term wealth. We guide home buyers and investors through every step of the property journey, combining strategy, research, and expertise to secure the right property with confidence.</p>
-        </div>
       </div>
     </section>
 
@@ -919,8 +912,20 @@
     <section id="stats" class="stats-bar">
       <div class="stats-grid">
         <div class="stat-item fade-in-up" data-delay="0">
-          <span class="stat-number count-up" data-target="60" data-suffix="+">0</span>
-          <span class="stat-label">Properties Secured Across Australia</span>
+          <span class="stat-number count-up" data-target="100" data-suffix="+">0</span>
+          <span class="stat-label">Properties Secured</span>
+        </div>
+        <div class="stat-item fade-in-up" data-delay="150">
+          <span class="stat-number count-up" data-target="6" data-suffix="">0</span>
+          <span class="stat-label">States Covered</span>
+        </div>
+        <div class="stat-item fade-in-up" data-delay="300">
+          <span class="stat-number count-up" data-target="98" data-suffix="%">0</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item fade-in-up" data-delay="450">
+          <span class="stat-number count-up" data-target="3" data-suffix="+">0</span>
+          <span class="stat-label">Years Experience</span>
         </div>
       </div>
     </section>
@@ -1022,112 +1027,62 @@
     </section>
 
     <!-- ================================================
-         Property Pathway
-         ================================================ -->
-    <section id="pathway" class="section">
-      <div class="container">
-        <div class="pathway-header">
-          <p class="overline fade-in-up">YOUR JOURNEY</p>
-          <h2 class="section-heading fade-in-up">A Structured Pathway to Smarter Property Decisions</h2>
-        </div>
-        <div class="pathway-grid">
-          <div class="pathway-card fade-in-up" data-delay="0">
-            <div class="pathway-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3 class="pathway-step-name">Foundation</h3>
-            <p class="pathway-subtitle">Education &amp; Goal Setting</p>
-            <p class="pathway-desc">Learn the property fundamentals, market trends, growth opportunities, investment strategies and align it with your goals.</p>
-          </div>
-          <div class="pathway-card fade-in-up" data-delay="100">
-            <div class="pathway-icon"><i class="fas fa-compass"></i></div>
-            <h3 class="pathway-step-name">Clarity</h3>
-            <p class="pathway-subtitle">Discovery &amp; Strategy</p>
-            <p class="pathway-desc">We refine your goals into a tailored property strategy.</p>
-          </div>
-          <div class="pathway-card fade-in-up" data-delay="200">
-            <div class="pathway-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-            <h3 class="pathway-step-name">Research</h3>
-            <p class="pathway-subtitle">Market Insight &amp; Opportunity Search</p>
-            <p class="pathway-desc">Analyse markets, suburbs, and property opportunities.</p>
-          </div>
-          <div class="pathway-card fade-in-up" data-delay="300">
-            <div class="pathway-icon"><i class="fas fa-list-check"></i></div>
-            <h3 class="pathway-step-name">Selection</h3>
-            <p class="pathway-subtitle">Smart Shortlist &amp; Negotiation</p>
-            <p class="pathway-desc">Evaluate, shortlist, and negotiate for the right property.</p>
-          </div>
-          <div class="pathway-card fade-in-up" data-delay="400">
-            <div class="pathway-icon"><i class="fas fa-file-contract"></i></div>
-            <h3 class="pathway-step-name">Acquisition</h3>
-            <p class="pathway-subtitle">Contract to Settlement</p>
-            <p class="pathway-desc">Manage inspections, finance, legal steps, and settlement.</p>
-          </div>
-          <div class="pathway-card fade-in-up" data-delay="500">
-            <div class="pathway-icon"><i class="fas fa-handshake"></i></div>
-            <h3 class="pathway-step-name">Partnership</h3>
-            <p class="pathway-subtitle">Ongoing Portfolio Support</p>
-            <p class="pathway-desc">Post-settlement guidance, property management, and future growth planning.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================================
          Guidestone Method Timeline
          ================================================ -->
     <section id="method" class="section">
       <div class="container">
         <div class="text-center">
           <p class="overline fade-in-up">Our Process</p>
-          <h2 class="section-heading fade-in-up" data-delay="100">The Guidestone Method</h2>
-          <p class="section-subtext fade-in-up" data-delay="200" style="font-weight: 600; font-size: 20px;">Our 9-Step Property Buying Journey</p>
+          <h2 class="section-heading fade-in-up" data-delay="100">The Guidestone Method&trade;</h2>
+          <p class="section-subtext fade-in-up" data-delay="200">Our signature process ensures you make informed, confident property decisions every step of the way.</p>
         </div>
         <div class="method-timeline">
           <div class="method-step">
             <div class="method-circle">1</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-phone-alt"></i></div>
-              <h3 class="method-card-title">Discovery Call</h3>
-              <p class="method-card-desc">A complimentary consultation to understand your goals, budget, timeline, and property vision. This helps determine the best path forward for your purchase.</p>
+              <h3 class="method-card-title">Strategy Call</h3>
+              <p class="method-card-desc">Personalized consultation to understand your goals, financial position, and property aspirations.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">2</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-file-signature"></i></div>
-              <h3 class="method-card-title">Engagement &amp; Strategy Session</h3>
-              <p class="method-card-desc">Once a working agreement is signed, a detailed strategy session to define the right approach. We align on your investment goals, target locations, property type, and criteria to ensure every decision supports your long-term outcomes.</p>
+              <h3 class="method-card-title">Retainer Payment</h3>
+              <p class="method-card-desc">Confirm engagement and secure your dedicated strategy session with our team.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">3</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-search-location"></i></div>
-              <h3 class="method-card-title">Market Analysis</h3>
-              <p class="method-card-desc">In-depth research into suburbs, market trends, growth drivers, and property fundamentals to identify opportunities aligned with your strategy and strong long-term potential.</p>
+              <h3 class="method-card-title">Market Research &amp; Targeting</h3>
+              <p class="method-card-desc">Comprehensive suburb and property analysis based on your goals — growth potential, rental yield, and lifestyle fit.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">4</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-list-check"></i></div>
-              <h3 class="method-card-title">Property Search &amp; Due Diligence</h3>
-              <p class="method-card-desc">We actively search for suitable properties including both on-market and off-market opportunities, completing due diligence. A curated shortlist of high-quality properties is presented with insights and recommendations.</p>
+              <h3 class="method-card-title">Property Shortlisting</h3>
+              <p class="method-card-desc">Only properties matching your criteria are presented. Saves time and ensures strategic choices.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">5</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-balance-scale"></i></div>
-              <h3 class="method-card-title">Negotiation &amp; Secure</h3>
-              <p class="method-card-desc">We negotiate on your behalf to secure the property at the best possible price and favourable terms.</p>
+              <h3 class="method-card-title">Due Diligence &amp; Negotiation</h3>
+              <p class="method-card-desc">Review contracts, reports, and valuations. We handle negotiations to secure the right price.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">6</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-clipboard-check"></i></div>
-              <h3 class="method-card-title">Contract Management</h3>
-              <p class="method-card-desc">Managing the timelines from conditional to unconditional stage &mdash; coordinating building and pest inspections, finance &mdash; ensuring no hidden surprises and cost.</p>
+              <h3 class="method-card-title">Building &amp; Pest Reports</h3>
+              <p class="method-card-desc">Professional inspections ordered and interpreted, guiding you through every finding.</p>
             </div>
           </div>
           <div class="method-step">
@@ -1135,7 +1090,7 @@
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-user-tie"></i></div>
               <h3 class="method-card-title">Property Manager Introduction</h3>
-              <p class="method-card-desc">If the property is an investment, we introduce trusted property managers who can help maximise rental returns and manage the property effectively from day one.</p>
+              <p class="method-card-desc">Trusted property manager recommendations for investors — rental setup and management sorted.</p>
             </div>
           </div>
           <div class="method-step">
@@ -1143,15 +1098,15 @@
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-key"></i></div>
               <h3 class="method-card-title">Secure &amp; Settle</h3>
-              <p class="method-card-desc">We liaise with your broker, conveyancer, and agents to ensure a smooth settlement process.</p>
+              <p class="method-card-desc">Full support through settlement for a smooth handover and complete peace of mind.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">9</div>
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-chart-line"></i></div>
-              <h3 class="method-card-title">Ongoing Partnership</h3>
-              <p class="method-card-desc">Our relationship doesn&rsquo;t end at settlement. We remain available to support you with portfolio guidance, future purchases, renovation insights, and ongoing property strategy.</p>
+              <h3 class="method-card-title">Post-Purchase Support</h3>
+              <p class="method-card-desc">Guidance on portfolio growth, refinancing, or further acquisitions. Your long-term wealth partner.</p>
             </div>
           </div>
         </div>
@@ -1165,31 +1120,37 @@
       <div class="container text-center">
         <p class="overline fade-in-up">Our Reach</p>
         <h2 class="section-heading fade-in-up">We Buy Across Australia</h2>
-        <p class="section-subtext coverage-subtext fade-in-up">Our team covers major property markets across six states and territories.</p>
+        <p class="section-subtext coverage-subtext fade-in-up">From Melbourne to Perth, our team covers major property markets across six states and territories.</p>
         <div class="coverage-grid">
           <div class="coverage-card fade-in-up" data-delay="0">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">VIC</div>
+            <div class="coverage-card-cities">Melbourne, Geelong, Regional VIC</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="100">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">NSW</div>
+            <div class="coverage-card-cities">Sydney, Newcastle, Wollongong</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="200">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">QLD</div>
+            <div class="coverage-card-cities">Brisbane, Gold Coast, Sunshine Coast</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="300">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">SA</div>
+            <div class="coverage-card-cities">Adelaide, Regional SA</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="400">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">WA</div>
+            <div class="coverage-card-cities">Perth, Fremantle</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="500">
             <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">NT</div>
+            <div class="coverage-card-cities">Darwin, Alice Springs</div>
           </div>
         </div>
       </div>
@@ -1262,6 +1223,61 @@
       </div>
     </section>
 
+    <!-- ================================================
+         Testimonials
+         ================================================ -->
+    <section id="testimonials" class="section" aria-label="Testimonials">
+      <div class="container">
+        <div class="testimonials-header text-center fade-in-up">
+          <p class="overline">Client Stories</p>
+          <h2 class="section-heading">Trusted by Property Buyers Across Australia</h2>
+        </div>
+        <div class="carousel-wrapper fade-in-up" data-delay="150">
+          <button class="carousel-arrow carousel-arrow--prev" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-arrow carousel-arrow--next" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <div class="carousel-slide">
+                <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="slide-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="slide-quote">&ldquo;Guidestone made the entire process stress-free. Their research was thorough and we secured a property well below our budget.&rdquo;</p>
+                <p class="slide-name">Priya &amp; Raj</p>
+                <p class="slide-type">First Home Buyers, Melbourne</p>
+              </div>
+              <div class="carousel-slide">
+                <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="slide-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="slide-quote">&ldquo;As an interstate investor, I needed someone I could trust on the ground. Guidestone delivered beyond expectations.&rdquo;</p>
+                <p class="slide-name">James T.</p>
+                <p class="slide-type">Property Investor, Sydney</p>
+              </div>
+              <div class="carousel-slide">
+                <div class="slide-quote-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="slide-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="slide-quote">&ldquo;The Guidestone Method gave us complete confidence. From strategy call to settlement, every step was handled professionally.&rdquo;</p>
+                <p class="slide-name">Sarah &amp; Mark</p>
+                <p class="slide-type">Upgraders, Brisbane</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Go to slide 1" data-slide="0"></button>
+            <button class="carousel-dot" aria-label="Go to slide 2" data-slide="1"></button>
+            <button class="carousel-dot" aria-label="Go to slide 3" data-slide="2"></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================================================
          Contact
@@ -1271,7 +1287,7 @@
         <div class="text-center fade-in-up">
           <p class="overline">GET IN TOUCH</p>
           <h2 class="section-heading">Let's Start Your Property Journey</h2>
-          <p class="section-subtext" style="margin: 0 auto 60px auto;">Let's start your property journey together. Reach out and we'll get back to you within 24 hours.</p>
+          <p class="section-subtext" style="margin: 0 auto 60px auto;">Have a question or ready to take the next step? Reach out through any of the channels below and we'll get back to you within 24 hours.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-info">
@@ -1279,7 +1295,7 @@
               <div class="contact-card-icon gold"><i class="fas fa-phone-alt"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">Call Us</div>
-                <div class="contact-card-value"><a href="tel:+61433674084">0433 674 084</a></div>
+                <div class="contact-card-value"><a href="tel:+614XXXXXXXX">+61 4XX XXX XXX</a></div>
                 <div class="contact-card-sub">Mon – Sat, 9am – 6pm AEST</div>
               </div>
             </div>
@@ -1287,7 +1303,7 @@
               <div class="contact-card-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">WhatsApp</div>
-                <div class="contact-card-value"><a href="https://wa.me/61433674084" target="_blank" rel="noopener">0433 674 084</a></div>
+                <div class="contact-card-value"><a href="https://wa.me/614XXXXXXXX" target="_blank" rel="noopener">+61 4XX XXX XXX</a></div>
                 <div class="contact-card-sub">Quick replies, usually within 1 hour</div>
               </div>
             </div>
@@ -1295,8 +1311,16 @@
               <div class="contact-card-icon gold"><i class="fas fa-envelope"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">Email Us</div>
-                <div class="contact-card-value accent"><a href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a></div>
+                <div class="contact-card-value accent"><a href="mailto:hello@guidestoneproperty.com.au">hello@guidestoneproperty.com.au</a></div>
                 <div class="contact-card-sub">We respond within 24 hours</div>
+              </div>
+            </div>
+            <div class="contact-card fade-in-up" data-delay="300">
+              <div class="contact-card-icon gold"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-card-content">
+                <div class="contact-card-title">Our Base</div>
+                <div class="contact-card-value">Melbourne, Victoria</div>
+                <div class="contact-card-sub">Serving clients nationwide across Australia</div>
               </div>
             </div>
             <div class="fade-in-up" data-delay="400">
@@ -1320,7 +1344,7 @@
       <div class="container">
         <div class="cta-content fade-in-up">
           <p class="overline">TAKE THE NEXT STEP</p>
-          <h2 class="cta-heading">Ready to Start Your Property Journey?</h2>
+          <h2 class="cta-heading">Ready to Make Your Next Property Move?</h2>
           <p class="cta-subtext">Book a free strategy call and let's discuss how we can guide you to smarter property decisions.</p>
           <a href="#contact" class="btn-primary cta-btn">Book Your Free Strategy Call</a>
           <p class="cta-disclaimer">No obligation. No pressure. Just clarity.</p>
@@ -1368,9 +1392,9 @@
         <div class="fade-in-up" data-delay="300">
           <h3 class="footer-col-heading">Contact</h3>
           <ul class="footer-contact-list">
-            <li><i class="fas fa-envelope"></i><a href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a></li>
-            <li><i class="fas fa-phone-alt"></i><a href="tel:+61433674084">0433 674 084</a></li>
-            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/61433674084" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:hello@guidestoneproperty.com.au">hello@guidestoneproperty.com.au</a></li>
+            <li><i class="fas fa-phone-alt"></i><a href="tel:+614XXXXXXXX">+61 4XX XXX XXX</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/614XXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
             <li><i class="fas fa-map-marker-alt"></i><span>Melbourne, Australia — Serving Nationwide</span></li>
           </ul>
         </div>
@@ -1591,6 +1615,79 @@
     })();
   </script>
 
+  <!-- ================================================
+       Section 06 — Testimonials Carousel JS
+       ================================================ -->
+  <script>
+    (function() {
+      var currentSlide = 0;
+      var totalSlides = 3;
+      var autoInterval = null;
+      var idleTimeout = null;
+
+      var track = document.querySelector('#testimonials .carousel-track');
+      var dots = document.querySelectorAll('#testimonials .carousel-dot');
+      var prevBtn = document.querySelector('#testimonials .carousel-arrow--prev');
+      var nextBtn = document.querySelector('#testimonials .carousel-arrow--next');
+      var viewport = document.querySelector('#testimonials .carousel-viewport');
+
+      function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentSlide = index;
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        for (var i = 0; i < dots.length; i++) {
+          dots[i].classList.toggle('active', i === currentSlide);
+        }
+      }
+
+      function startAuto() {
+        stopAuto();
+        autoInterval = setInterval(function() { goToSlide(currentSlide + 1); }, 5000);
+      }
+
+      function stopAuto() {
+        if (autoInterval) { clearInterval(autoInterval); autoInterval = null; }
+      }
+
+      function onManualInteraction() {
+        stopAuto();
+        if (idleTimeout) clearTimeout(idleTimeout);
+        idleTimeout = setTimeout(function() { startAuto(); }, 10000);
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() { goToSlide(currentSlide - 1); onManualInteraction(); });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() { goToSlide(currentSlide + 1); onManualInteraction(); });
+      }
+
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() {
+          goToSlide(parseInt(this.getAttribute('data-slide'), 10));
+          onManualInteraction();
+        });
+      }
+
+      // Touch swipe
+      var touchStartX = 0;
+      if (viewport) {
+        viewport.addEventListener('touchstart', function(e) {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        viewport.addEventListener('touchend', function(e) {
+          var delta = touchStartX - e.changedTouches[0].screenX;
+          if (Math.abs(delta) > 50) {
+            goToSlide(delta > 0 ? currentSlide + 1 : currentSlide - 1);
+            onManualInteraction();
+          }
+        }, { passive: true });
+      }
+
+      startAuto();
+    })();
+  </script>
 
   <!-- ================================================
        Section 07 — Contact Form JS
