@@ -1,33 +1,45 @@
 <!-- Guidestone Property | Built 2026-03-12 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guidestone Property — Australia's Trusted Buyer's Agency</title>
-  <meta name="description" content="Guidestone Property is a premium buyer's agency helping home buyers and investors make smarter property decisions across Australia.">
-  <meta property="og:title" content="Guidestone Property — Australia's Trusted Buyer's Agency">
-  <meta property="og:description" content="Guidestone Property is a premium buyer's agency helping home buyers and investors make smarter property decisions across Australia.">
+  <meta name="description"
+    content="Guidestone Property is a premium buyer's agency helping home buyers and investors make smarter property decisions across Australia.">
+  <meta property="og:title"
+    content="Guidestone Property — Australia's Trusted Buyer's Agency">
+  <meta property="og:description"
+    content="Guidestone Property is a premium buyer's agency helping home buyers and investors make smarter property decisions across Australia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://guidestoneproperty.com.au">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,50 50,90 10,50' fill='%23c8a45c'/></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,10 90,50 50,90 10,50' fill='%23c8a45c'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* ================================================
        GLOBAL — CSS Reset
        ================================================ */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     img {
       max-width: 100%;
       display: block;
     }
+
     html {
       scroll-behavior: smooth;
     }
@@ -57,9 +69,9 @@
       --transition-default: 0.3s ease;
       --transition-smooth: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-      --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
-      --shadow-card-hover: 0 12px 40px rgba(0,0,0,0.12);
-      --shadow-nav: 0 2px 20px rgba(0,0,0,0.15);
+      --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+      --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
+      --shadow-nav: 0 2px 20px rgba(0, 0, 0, 0.15);
     }
 
     /* ================================================
@@ -71,14 +83,17 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+
     .section {
       padding: var(--section-padding) 0;
     }
+
     .container {
       max-width: var(--content-max-width);
       margin: 0 auto;
       padding: var(--content-padding);
     }
+
     .overline {
       font-family: var(--font-body);
       text-transform: uppercase;
@@ -87,6 +102,7 @@
       color: var(--color-primary-accent);
       margin-bottom: 16px;
     }
+
     .section-heading {
       font-family: var(--font-heading);
       color: var(--color-primary-dark);
@@ -94,6 +110,7 @@
       line-height: 1.2;
       margin-bottom: 20px;
     }
+
     .section-subtext {
       font-family: var(--font-body);
       color: var(--color-muted);
@@ -101,14 +118,17 @@
       line-height: 1.7;
       max-width: 650px;
     }
+
     .text-center {
       text-align: center;
     }
+
     .text-center .section-subtext,
     .text-center .overline {
       margin-left: auto;
       margin-right: auto;
     }
+
     .btn-primary {
       background: var(--color-primary-accent);
       color: var(--color-primary-dark);
@@ -123,14 +143,16 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(200,164,92,0.35);
+      box-shadow: 0 8px 25px rgba(200, 164, 92, 0.35);
     }
+
     .btn-secondary {
       background: transparent;
       color: white;
-      border: 2px solid rgba(255,255,255,0.5);
+      border: 2px solid rgba(255, 255, 255, 0.5);
       padding: 16px 36px;
       border-radius: 50px;
       font-family: var(--font-body);
@@ -141,15 +163,18 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .btn-secondary:hover {
       border-color: white;
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
+
     .fade-in-up {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity var(--transition-smooth), transform var(--transition-smooth);
     }
+
     .fade-in-up.visible {
       opacity: 1;
       transform: translateY(0);
@@ -172,14 +197,17 @@
       .section {
         padding: 80px 0;
       }
+
       .section-heading {
         font-size: 36px;
       }
     }
+
     @media (max-width: 768px) {
       .section {
         padding: var(--section-padding-mobile) 0;
       }
+
       .section-heading {
         font-size: 32px;
       }
@@ -200,12 +228,14 @@
       display: flex;
       align-items: center;
     }
+
     #navbar.scrolled {
       background: rgba(26, 35, 50, 0.97);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       box-shadow: var(--shadow-nav);
     }
+
     #navbar .navbar-inner {
       max-width: var(--content-max-width);
       margin: 0 auto;
@@ -215,19 +245,23 @@
       justify-content: space-between;
       align-items: center;
     }
+
     #navbar .navbar-logo {
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       transition: color var(--transition-default);
     }
+
     #navbar .navbar-logo:hover {
       color: var(--color-primary-accent);
     }
+
     #navbar .navbar-logo:hover .logo-main,
     #navbar .navbar-logo:hover .logo-sub {
       color: var(--color-primary-accent);
     }
+
     #navbar .logo-main {
       font-family: var(--font-heading);
       font-size: 22px;
@@ -236,11 +270,13 @@
       letter-spacing: 2px;
       transition: color var(--transition-default);
     }
+
     #navbar .logo-diamond {
       color: var(--color-primary-accent);
       margin: 0 6px;
       font-size: 22px;
     }
+
     #navbar .logo-sub {
       font-family: var(--font-heading);
       font-size: 22px;
@@ -249,10 +285,12 @@
       letter-spacing: 2px;
       transition: color var(--transition-default);
     }
+
     #navbar .navbar-nav {
       display: flex;
       align-items: center;
     }
+
     #navbar .navbar-nav ul {
       list-style: none;
       display: flex;
@@ -261,6 +299,7 @@
       margin: 0;
       padding: 0;
     }
+
     #navbar .navbar-nav a {
       font-family: var(--font-body);
       font-size: 13px;
@@ -272,17 +311,21 @@
       transition: color var(--transition-default);
       position: relative;
     }
+
     #navbar .navbar-nav a:hover,
     #navbar .navbar-nav a.active {
       color: var(--color-primary-accent);
     }
+
     #navbar .navbar-cta {
       padding: 12px 28px;
       font-size: 13px;
     }
+
     #navbar .navbar-cta:hover {
       box-shadow: 0 0 20px rgba(200, 164, 92, 0.4);
     }
+
     #navbar .hamburger {
       display: none;
       flex-direction: column;
@@ -294,6 +337,7 @@
       position: relative;
       z-index: 1001;
     }
+
     #navbar .hamburger span {
       display: block;
       width: 24px;
@@ -304,12 +348,34 @@
       left: 50%;
       transform: translateX(-50%);
     }
-    #navbar .hamburger span:nth-child(1) { top: 8px; }
-    #navbar .hamburger span:nth-child(2) { top: 50%; transform: translate(-50%, -50%); }
-    #navbar .hamburger span:nth-child(3) { bottom: 8px; }
-    .nav-open #navbar .hamburger span:nth-child(1) { top: 50%; transform: translate(-50%, -50%) rotate(45deg); }
-    .nav-open #navbar .hamburger span:nth-child(2) { opacity: 0; }
-    .nav-open #navbar .hamburger span:nth-child(3) { bottom: 50%; transform: translate(-50%, 50%) rotate(-45deg); }
+
+    #navbar .hamburger span:nth-child(1) {
+      top: 8px;
+    }
+
+    #navbar .hamburger span:nth-child(2) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #navbar .hamburger span:nth-child(3) {
+      bottom: 8px;
+    }
+
+    .nav-open #navbar .hamburger span:nth-child(1) {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .nav-open #navbar .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-open #navbar .hamburger span:nth-child(3) {
+      bottom: 50%;
+      transform: translate(-50%, 50%) rotate(-45deg);
+    }
+
     #navbar .mobile-overlay {
       display: none;
       position: fixed;
@@ -325,9 +391,22 @@
       transform: translateX(100%);
       transition: transform var(--transition-default);
     }
-    .nav-open #navbar .mobile-overlay { transform: translateX(0); }
-    #navbar .mobile-overlay ul { list-style: none; padding: 0; margin: 0; text-align: center; }
-    #navbar .mobile-overlay ul li { margin-bottom: 24px; }
+
+    .nav-open #navbar .mobile-overlay {
+      transform: translateX(0);
+    }
+
+    #navbar .mobile-overlay ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+
+    #navbar .mobile-overlay ul li {
+      margin-bottom: 24px;
+    }
+
     #navbar .mobile-overlay ul li a {
       font-family: var(--font-body);
       font-size: 24px;
@@ -338,8 +417,14 @@
       font-weight: 500;
       transition: color var(--transition-default);
     }
-    #navbar .mobile-overlay ul li a:hover { color: var(--color-primary-accent); }
-    #navbar .mobile-overlay .mobile-cta { margin-top: 32px; }
+
+    #navbar .mobile-overlay ul li a:hover {
+      color: var(--color-primary-accent);
+    }
+
+    #navbar .mobile-overlay .mobile-cta {
+      margin-top: 32px;
+    }
 
     /* Hero */
     #hero {
@@ -351,24 +436,39 @@
       justify-content: center;
       overflow: hidden;
     }
+
     #hero .hero-bg {
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80') center/cover no-repeat;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a0?w=1920&q=80') center/cover no-repeat;
       animation: heroKenBurns 20s ease-in-out infinite alternate;
       z-index: 0;
     }
+
     @keyframes heroKenBurns {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.08); }
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.08);
+      }
     }
+
     #hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(135deg, rgba(26, 35, 50, 0.85) 0%, rgba(26, 35, 50, 0.6) 100%);
       z-index: 1;
     }
+
     #hero .hero-content {
       position: relative;
       z-index: 2;
@@ -382,8 +482,17 @@
       transform: translateY(30px);
       transition: opacity 1s ease, transform 1s ease;
     }
-    #hero .hero-content.hero-visible { opacity: 1; transform: translateY(0); }
-    #hero .hero-overline { color: var(--color-primary-accent); opacity: 0.9; }
+
+    #hero .hero-content.hero-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #hero .hero-overline {
+      color: var(--color-primary-accent);
+      opacity: 0.9;
+    }
+
     #hero .hero-title {
       font-family: var(--font-heading);
       font-size: 56px;
@@ -392,6 +501,7 @@
       line-height: 1.2;
       margin-bottom: 24px;
     }
+
     #hero .hero-subtext {
       font-family: var(--font-body);
       font-size: 18px;
@@ -399,6 +509,7 @@
       max-width: 600px;
       line-height: 1.7;
     }
+
     #hero .hero-buttons {
       display: flex;
       gap: 16px;
@@ -406,7 +517,11 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-    #hero .hero-buttons .btn-primary { padding: 18px 40px; }
+
+    #hero .hero-buttons .btn-primary {
+      padding: 18px 40px;
+    }
+
     #hero .scroll-indicator {
       position: absolute;
       bottom: 30px;
@@ -419,23 +534,63 @@
       transition: opacity var(--transition-default);
       cursor: pointer;
     }
+
     @keyframes heroBounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(10px); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(10px);
+      }
     }
 
     /* Brand Story */
-    #brand-story { background: var(--color-white); }
-    #brand-story .brand-story-inner { max-width: 800px; margin: 0 auto; text-align: center; }
-    #brand-story .brand-icon { color: var(--color-primary-accent); font-size: 40px; margin-bottom: 20px; }
-    #brand-story .brand-paragraph { font-family: var(--font-body); color: var(--color-secondary); line-height: 1.7; font-size: 17px; max-width: 800px; margin: 0 auto 20px auto; }
-    #brand-story .brand-paragraph:last-child { margin-bottom: 0; }
-    @media (max-width: 768px) {
-      #brand-story .brand-paragraph { font-size: 16px; }
-      #brand-story .brand-icon { font-size: 32px; }
+    #brand-story {
+      background: var(--color-white);
     }
+
+    #brand-story .brand-story-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #brand-story .brand-icon {
+      color: var(--color-primary-accent);
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    #brand-story .brand-paragraph {
+      font-family: var(--font-body);
+      color: var(--color-secondary);
+      line-height: 1.7;
+      font-size: 17px;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    #brand-story .brand-paragraph:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      #brand-story .brand-paragraph {
+        font-size: 16px;
+      }
+
+      #brand-story .brand-icon {
+        font-size: 32px;
+      }
+    }
+
     @media (max-width: 480px) {
-      #brand-story .brand-paragraph { font-size: 15px; }
+      #brand-story .brand-paragraph {
+        font-size: 15px;
+      }
     }
 
     /* Stats Bar */
@@ -445,6 +600,7 @@
       border-top: 2px solid var(--color-primary-accent);
       border-bottom: 2px solid var(--color-primary-accent);
     }
+
     #stats .stats-grid {
       display: flex;
       justify-content: center;
@@ -453,6 +609,7 @@
       margin: 0 auto;
       padding: var(--content-padding);
     }
+
     #stats .stat-item {
       display: flex;
       flex-direction: column;
@@ -460,6 +617,7 @@
       text-align: center;
       flex: 1;
     }
+
     #stats .stat-number {
       font-family: var(--font-heading);
       font-size: 48px;
@@ -467,6 +625,7 @@
       color: var(--color-white);
       line-height: 1;
     }
+
     #stats .stat-label {
       font-family: var(--font-body);
       font-size: 13px;
@@ -478,365 +637,1608 @@
 
     /* Nav responsive */
     @media (max-width: 1024px) {
-      #navbar .navbar-nav ul { gap: 20px; }
-      #navbar .navbar-cta { padding: 10px 22px; }
+      #navbar .navbar-nav ul {
+        gap: 20px;
+      }
+
+      #navbar .navbar-cta {
+        padding: 10px 22px;
+      }
     }
+
     @media (max-width: 768px) {
-      #navbar .navbar-nav, #navbar .navbar-cta-desktop { display: none; }
-      #navbar .hamburger { display: flex; width: 44px; height: 44px; }
-      #navbar .mobile-overlay { display: flex; }
+
+      #navbar .navbar-nav,
+      #navbar .navbar-cta-desktop {
+        display: none;
+      }
+
+      #navbar .hamburger {
+        display: flex;
+        width: 44px;
+        height: 44px;
+      }
+
+      #navbar .mobile-overlay {
+        display: flex;
+      }
     }
+
     @media (max-width: 480px) {
-      #navbar .logo-main, #navbar .logo-sub, #navbar .logo-diamond { font-size: 17px; letter-spacing: 1px; }
+
+      #navbar .logo-main,
+      #navbar .logo-sub,
+      #navbar .logo-diamond {
+        font-size: 17px;
+        letter-spacing: 1px;
+      }
     }
+
     /* Hero responsive */
     @media (max-width: 1024px) {
-      #hero .hero-title { font-size: 44px; }
+      #hero .hero-title {
+        font-size: 44px;
+      }
     }
+
     @media (max-width: 768px) {
-      #hero { min-height: 600px; }
-      #hero .hero-title { font-size: 36px; }
-      #hero .hero-subtext { font-size: 16px; }
-      #hero .hero-content { padding: 60px 20px 0; }
-      #hero .hero-buttons { flex-direction: column; align-items: center; }
+      #hero {
+        min-height: 600px;
+      }
+
+      #hero .hero-title {
+        font-size: 36px;
+      }
+
+      #hero .hero-subtext {
+        font-size: 16px;
+      }
+
+      #hero .hero-content {
+        padding: 60px 20px 0;
+      }
+
+      #hero .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
     }
+
     @media (max-width: 480px) {
-      #hero .hero-title { font-size: 30px; }
-      #hero .hero-content { padding: 40px 16px 0; }
-      #hero .hero-subtext { font-size: 15px; }
+      #hero .hero-title {
+        font-size: 30px;
+      }
+
+      #hero .hero-content {
+        padding: 40px 16px 0;
+      }
+
+      #hero .hero-subtext {
+        font-size: 15px;
+      }
+
       #hero .hero-buttons .btn-primary,
-      #hero .hero-buttons .btn-secondary { padding: 14px 28px; }
+      #hero .hero-buttons .btn-secondary {
+        padding: 14px 28px;
+      }
     }
+
     /* Stats responsive */
     @media (max-width: 1024px) {
-      #stats .stat-number { font-size: 40px; }
-      #stats { padding: 40px 0; }
+      #stats .stat-number {
+        font-size: 40px;
+      }
+
+      #stats {
+        padding: 40px 0;
+      }
     }
+
     @media (max-width: 768px) {
-      #stats .stat-number { font-size: 36px; }
+      #stats .stat-number {
+        font-size: 36px;
+      }
     }
+
     @media (max-width: 480px) {
-      #stats .stat-number { font-size: 30px; }
-      #stats { padding: 32px 0; }
-      #stats .stat-label { font-size: 11px; }
+      #stats .stat-number {
+        font-size: 30px;
+      }
+
+      #stats {
+        padding: 32px 0;
+      }
+
+      #stats .stat-label {
+        font-size: 11px;
+      }
     }
 
     /* ================================================
        SECTION 03 — Why Choose Us + Services
        ================================================ */
-    #why-us { background: var(--color-white); }
-    #why-us .why-us-grid { display: grid; grid-template-columns: 55% 45%; gap: 60px; align-items: center; }
-    #why-us .why-us-body { font-family: var(--font-body); font-size: 16px; color: var(--color-secondary); line-height: 1.7; margin-bottom: 36px; }
-    #why-us .why-us-benefits { list-style: none; padding: 0; margin: 0 0 32px 0; }
-    #why-us .why-us-benefit { display: flex; align-items: flex-start; gap: 16px; border-left: 3px solid var(--color-primary-accent); padding-left: 20px; margin-bottom: 20px; }
-    #why-us .why-us-benefit:last-child { margin-bottom: 0; }
-    #why-us .benefit-icon { width: 44px; height: 44px; min-width: 44px; border-radius: 50%; background: rgba(200, 164, 92, 0.1); display: flex; align-items: center; justify-content: center; color: var(--color-primary-accent); font-size: 18px; }
-    #why-us .benefit-content { flex: 1; }
-    #why-us .benefit-title { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--color-primary-dark); margin: 0 0 4px 0; }
-    #why-us .benefit-desc { font-family: var(--font-body); font-size: 14px; color: var(--color-muted); margin: 0; line-height: 1.5; }
-    #why-us .why-us-cta { display: inline-block; font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--color-primary-accent); text-decoration: none; transition: var(--transition-default); }
-    #why-us .why-us-cta:hover { text-decoration: underline; }
-    #why-us .why-us-image-wrapper { position: relative; }
-    #why-us .why-us-image-wrapper::before { content: ''; position: absolute; width: 100%; height: 100%; bottom: -20px; right: -20px; border: 3px solid var(--color-primary-accent); border-radius: 12px; z-index: -1; }
-    #why-us .why-us-image { width: 100%; display: block; border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12); position: relative; z-index: 1; }
+    #why-us {
+      background: var(--color-white);
+    }
 
-    #services { background: var(--color-bg-light); }
-    #services .services-header { text-align: center; margin-bottom: 60px; }
-    #services .services-header .section-heading { max-width: 600px; margin: 0 auto 20px auto; }
-    #services .services-header .section-subtext { margin: 0 auto; }
-    #services .services-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    #services .service-card { background: var(--color-white); border-radius: 16px; box-shadow: var(--shadow-card); padding: 40px 30px; text-align: center; transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default); border-top: 3px solid transparent; width: calc(33.333% - 20px); }
-    #services .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card-hover); border-top-color: var(--color-primary-accent); }
-    #services .service-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--color-primary-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto; color: var(--color-white); font-size: 24px; }
-    #services .service-name { font-family: var(--font-body); font-size: 20px; font-weight: 600; color: var(--color-primary-dark); margin: 20px 0 12px; }
-    #services .service-desc { font-family: var(--font-body); font-size: 15px; color: var(--color-muted); line-height: 1.6; margin: 0; }
-    #services .service-link { display: inline-block; font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--color-primary-accent); text-decoration: none; margin-top: 20px; transition: var(--transition-default); }
-    #services .service-link:hover { text-decoration: underline; }
+    #why-us .why-us-grid {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 60px;
+      align-items: center;
+    }
+
+    #why-us .why-us-body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--color-secondary);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    #why-us .why-us-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px 0;
+    }
+
+    #why-us .why-us-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      border-left: 3px solid var(--color-primary-accent);
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    #why-us .why-us-benefit:last-child {
+      margin-bottom: 0;
+    }
+
+    #why-us .benefit-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: rgba(200, 164, 92, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-accent);
+      font-size: 18px;
+    }
+
+    #why-us .benefit-content {
+      flex: 1;
+    }
+
+    #why-us .benefit-title {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin: 0 0 4px 0;
+    }
+
+    #why-us .benefit-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    #why-us .why-us-cta {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-primary-accent);
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #why-us .why-us-cta:hover {
+      text-decoration: underline;
+    }
+
+    #why-us .why-us-image-wrapper {
+      position: relative;
+    }
+
+    #why-us .why-us-image-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: -20px;
+      right: -20px;
+      border: 3px solid var(--color-primary-accent);
+      border-radius: 12px;
+      z-index: -1;
+    }
+
+    #why-us .why-us-image {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+      position: relative;
+      z-index: 1;
+    }
+
+    #services {
+      background: var(--color-bg-light);
+    }
+
+    #services .services-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    #services .services-header .section-heading {
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+    }
+
+    #services .services-header .section-subtext {
+      margin: 0 auto;
+    }
+
+    #services .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    #services .service-card {
+      background: var(--color-white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      padding: 40px 30px;
+      text-align: center;
+      transition: transform var(--transition-default), box-shadow var(--transition-default), border-color var(--transition-default);
+      border-top: 3px solid transparent;
+      width: calc(33.333% - 20px);
+    }
+
+    #services .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+      border-top-color: var(--color-primary-accent);
+    }
+
+    #services .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--color-primary-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      color: var(--color-white);
+      font-size: 24px;
+    }
+
+    #services .service-name {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin: 20px 0 12px;
+    }
+
+    #services .service-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    #services .service-link {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary-accent);
+      text-decoration: none;
+      margin-top: 20px;
+      transition: var(--transition-default);
+    }
+
+    #services .service-link:hover {
+      text-decoration: underline;
+    }
 
     @media (max-width: 1024px) {
-      #why-us .why-us-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-      #services .service-card { width: calc(50% - 15px); padding: 32px 24px; }
+      #why-us .why-us-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      #services .service-card {
+        width: calc(50% - 15px);
+        padding: 32px 24px;
+      }
     }
+
     @media (max-width: 768px) {
-      #why-us .why-us-grid { grid-template-columns: 1fr; gap: 40px; }
-      #why-us .why-us-image-col { order: -1; }
-      #why-us .why-us-image { max-height: 300px; object-fit: cover; }
-      #why-us .why-us-image-wrapper::before { display: none; }
-      #why-us .section-heading { font-size: 32px; }
-      #services .section-heading { font-size: 32px; }
-      #services .service-card { width: 100%; padding: 32px 24px; }
+      #why-us .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      #why-us .why-us-image-col {
+        order: -1;
+      }
+
+      #why-us .why-us-image {
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      #why-us .why-us-image-wrapper::before {
+        display: none;
+      }
+
+      #why-us .section-heading {
+        font-size: 32px;
+      }
+
+      #services .section-heading {
+        font-size: 32px;
+      }
+
+      #services .service-card {
+        width: 100%;
+        padding: 32px 24px;
+      }
     }
+
     @media (max-width: 480px) {
-      #why-us .why-us-benefit { flex-direction: column; gap: 10px; }
-      #services .service-card { padding: 28px 20px; }
-      #services .service-name { font-size: 18px; }
+      #why-us .why-us-benefit {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #services .service-card {
+        padding: 28px 20px;
+      }
+
+      #services .service-name {
+        font-size: 18px;
+      }
     }
 
     /* ================================================
        Property Pathway
        ================================================ */
-    #pathway { background: var(--color-white); }
-    #pathway .pathway-header { text-align: center; margin-bottom: 60px; }
-    #pathway .pathway-header .section-heading { max-width: 700px; margin: 0 auto 20px auto; }
-    #pathway .pathway-header .section-subtext { margin: 0 auto; }
-    #pathway .pathway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    #pathway .pathway-card { background: var(--color-bg-light); border-radius: 16px; box-shadow: var(--shadow-card); padding: 36px 28px; text-align: center; transition: transform var(--transition-default), box-shadow var(--transition-default), border-left-color var(--transition-default); border-left: 4px solid transparent; }
-    #pathway .pathway-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card-hover); border-left-color: var(--color-primary-accent); }
-    #pathway .pathway-icon { width: 56px; height: 56px; border-radius: 50%; background: var(--color-primary-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: var(--color-white); font-size: 22px; }
-    #pathway .pathway-step-name { font-family: var(--font-body); font-size: 20px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 4px; }
-    #pathway .pathway-subtitle { font-family: var(--font-body); font-size: 14px; color: var(--color-muted); margin-bottom: 12px; }
-    #pathway .pathway-desc { font-family: var(--font-body); font-size: 15px; color: var(--color-secondary); line-height: 1.6; margin: 0; }
+    #pathway {
+      background: var(--color-white);
+    }
+
+    #pathway .pathway-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    #pathway .pathway-header .section-heading {
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+
+    #pathway .pathway-header .section-subtext {
+      margin: 0 auto;
+    }
+
+    #pathway .pathway-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    #pathway .pathway-card {
+      background: var(--color-bg-light);
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      padding: 36px 28px;
+      text-align: center;
+      transition: transform var(--transition-default), box-shadow var(--transition-default), border-left-color var(--transition-default);
+      border-left: 4px solid transparent;
+    }
+
+    #pathway .pathway-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+      border-left-color: var(--color-primary-accent);
+    }
+
+    #pathway .pathway-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-primary-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--color-white);
+      font-size: 22px;
+    }
+
+    #pathway .pathway-step-name {
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 4px;
+    }
+
+    #pathway .pathway-subtitle {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-muted);
+      margin-bottom: 12px;
+    }
+
+    #pathway .pathway-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
     @media (max-width: 1024px) {
-      #pathway .pathway-grid { grid-template-columns: repeat(2, 1fr); }
-      #pathway .pathway-card { padding: 30px 24px; }
+      #pathway .pathway-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #pathway .pathway-card {
+        padding: 30px 24px;
+      }
     }
+
     @media (max-width: 768px) {
-      #pathway .pathway-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      #pathway .pathway-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
     }
+
     @media (max-width: 480px) {
-      #pathway .pathway-card { padding: 24px 20px; }
-      #pathway .pathway-step-name { font-size: 18px; }
+      #pathway .pathway-card {
+        padding: 24px 20px;
+      }
+
+      #pathway .pathway-step-name {
+        font-size: 18px;
+      }
     }
 
     /* ================================================
        SECTION 04 — Guidestone Method Timeline
        ================================================ */
-    #method { background: var(--color-primary-dark); overflow: hidden; }
-    #method .section-heading { color: #ffffff; }
-    #method .section-subtext { color: rgba(255, 255, 255, 0.7); margin: 0 auto 70px auto; }
-    #method .method-timeline { position: relative; max-width: 960px; margin: 0 auto; }
-    #method .method-timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--color-primary-accent); transform: scaleY(0); transform-origin: top center; transition: transform 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    #method .method-timeline.line-visible::before { transform: scaleY(1); }
-    #method .method-step { display: flex; align-items: flex-start; position: relative; margin-bottom: 24px; }
-    #method .method-step:nth-child(odd) { justify-content: flex-start; padding-right: calc(50% + 30px); }
-    #method .method-step:nth-child(odd) .method-card { text-align: right; margin-left: auto; }
-    #method .method-step:nth-child(even) { justify-content: flex-end; padding-left: calc(50% + 30px); }
-    #method .method-step:nth-child(even) .method-card { text-align: left; margin-right: auto; }
-    #method .method-circle { position: absolute; left: 50%; top: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary-accent); color: var(--color-primary-dark); font-family: var(--font-body); font-weight: 600; font-size: 16px; display: flex; align-items: center; justify-content: center; transform: translateX(-50%); z-index: 2; box-shadow: 0 0 0 0 rgba(200, 164, 92, 0.4); }
-    @keyframes method-circle-pulse { 0% { box-shadow: 0 0 0 0 rgba(200, 164, 92, 0.4); } 100% { box-shadow: 0 0 0 12px rgba(200, 164, 92, 0); } }
-    #method .method-circle.pulse { animation: method-circle-pulse 1s ease-out forwards; }
-    #method .method-card { background: var(--color-card-dark); border: 1px solid rgba(200, 164, 92, 0.15); border-radius: 16px; padding: 30px; max-width: 420px; width: 100%; transition: opacity var(--transition-smooth), transform var(--transition-smooth); }
-    #method .method-step:nth-child(odd) .method-card { opacity: 0; transform: translateY(30px) translateX(-30px); }
-    #method .method-step:nth-child(even) .method-card { opacity: 0; transform: translateY(30px) translateX(30px); }
-    #method .method-step:nth-child(odd) .method-card.visible { opacity: 1; transform: translateY(0) translateX(0); }
-    #method .method-step:nth-child(even) .method-card.visible { opacity: 1; transform: translateY(0) translateX(0); }
-    #method .method-card-icon { color: var(--color-primary-accent); font-size: 20px; margin-bottom: 12px; }
-    #method .method-card-title { font-family: var(--font-body); font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 8px; }
-    #method .method-card-desc { font-family: var(--font-body); font-size: 15px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; }
+    #method {
+      background: var(--color-primary-dark);
+      overflow: hidden;
+    }
+
+    #method .section-heading {
+      color: #ffffff;
+    }
+
+    #method .section-subtext {
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0 auto 70px auto;
+    }
+
+    #method .method-timeline {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    #method .method-timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-primary-accent);
+      transform: scaleY(0);
+      transform-origin: top center;
+      transition: transform 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    #method .method-timeline.line-visible::before {
+      transform: scaleY(1);
+    }
+
+    #method .method-step {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    #method .method-step:nth-child(odd) {
+      justify-content: flex-start;
+      padding-right: calc(50% + 30px);
+    }
+
+    #method .method-step:nth-child(odd) .method-card {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    #method .method-step:nth-child(even) {
+      justify-content: flex-end;
+      padding-left: calc(50% + 30px);
+    }
+
+    #method .method-step:nth-child(even) .method-card {
+      text-align: left;
+      margin-right: auto;
+    }
+
+    #method .method-circle {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary-accent);
+      color: var(--color-primary-dark);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 0 0 rgba(200, 164, 92, 0.4);
+    }
+
+    @keyframes method-circle-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(200, 164, 92, 0.4);
+      }
+
+      100% {
+        box-shadow: 0 0 0 12px rgba(200, 164, 92, 0);
+      }
+    }
+
+    #method .method-circle.pulse {
+      animation: method-circle-pulse 1s ease-out forwards;
+    }
+
+    #method .method-card {
+      background: var(--color-card-dark);
+      border: 1px solid rgba(200, 164, 92, 0.15);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 420px;
+      width: 100%;
+      transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+    }
+
+    #method .method-step:nth-child(odd) .method-card {
+      opacity: 0;
+      transform: translateY(30px) translateX(-30px);
+    }
+
+    #method .method-step:nth-child(even) .method-card {
+      opacity: 0;
+      transform: translateY(30px) translateX(30px);
+    }
+
+    #method .method-step:nth-child(odd) .method-card.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+
+    #method .method-step:nth-child(even) .method-card.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0);
+    }
+
+    #method .method-card-icon {
+      color: var(--color-primary-accent);
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    #method .method-card-title {
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    #method .method-card-desc {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
 
     @media (max-width: 1024px) {
-      #method .method-card { max-width: 360px; padding: 24px; }
+      #method .method-card {
+        max-width: 360px;
+        padding: 24px;
+      }
     }
+
     @media (max-width: 768px) {
-      #method .method-timeline::before { left: 20px; }
-      #method .method-step { padding-left: 56px; padding-right: 0; }
-      #method .method-step:nth-child(odd) { justify-content: flex-start; padding-right: 0; padding-left: 56px; }
-      #method .method-step:nth-child(even) { justify-content: flex-start; padding-left: 56px; }
+      #method .method-timeline::before {
+        left: 20px;
+      }
+
+      #method .method-step {
+        padding-left: 56px;
+        padding-right: 0;
+      }
+
+      #method .method-step:nth-child(odd) {
+        justify-content: flex-start;
+        padding-right: 0;
+        padding-left: 56px;
+      }
+
+      #method .method-step:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 56px;
+      }
+
       #method .method-step:nth-child(odd) .method-card,
-      #method .method-step:nth-child(even) .method-card { text-align: left; margin-left: 0; margin-right: 0; max-width: 100%; }
-      #method .method-circle { left: 20px; }
+      #method .method-step:nth-child(even) .method-card {
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+      }
+
+      #method .method-circle {
+        left: 20px;
+      }
+
       #method .method-step:nth-child(odd) .method-card,
-      #method .method-step:nth-child(even) .method-card { opacity: 0; transform: translateY(30px) translateX(0); }
+      #method .method-step:nth-child(even) .method-card {
+        opacity: 0;
+        transform: translateY(30px) translateX(0);
+      }
+
       #method .method-step:nth-child(odd) .method-card.visible,
-      #method .method-step:nth-child(even) .method-card.visible { opacity: 1; transform: translateY(0) translateX(0); }
+      #method .method-step:nth-child(even) .method-card.visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+      }
     }
+
     @media (max-width: 480px) {
-      #method .method-card { padding: 20px; }
-      #method .method-card-title { font-size: 16px; }
-      #method .method-card-desc { font-size: 14px; }
-      #method .method-step { padding-left: 50px; margin-bottom: 16px; }
-      #method .method-step:nth-child(odd) { padding-left: 50px; }
-      #method .method-step:nth-child(even) { padding-left: 50px; }
-      #method .method-circle { width: 36px; height: 36px; font-size: 14px; }
+      #method .method-card {
+        padding: 20px;
+      }
+
+      #method .method-card-title {
+        font-size: 16px;
+      }
+
+      #method .method-card-desc {
+        font-size: 14px;
+      }
+
+      #method .method-step {
+        padding-left: 50px;
+        margin-bottom: 16px;
+      }
+
+      #method .method-step:nth-child(odd) {
+        padding-left: 50px;
+      }
+
+      #method .method-step:nth-child(even) {
+        padding-left: 50px;
+      }
+
+      #method .method-circle {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+      }
     }
 
     /* ================================================
        SECTION 05 — Coverage + Founder
        ================================================ */
-    #coverage { background: var(--color-white); }
-    #coverage .coverage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
-    #coverage .coverage-card { background: var(--color-bg-light); border-radius: 16px; padding: 24px 20px; text-align: center; transition: var(--transition-default); border-bottom: 3px solid transparent; position: relative; }
-    #coverage .coverage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-bottom: 3px solid var(--color-primary-accent); }
-    #coverage .coverage-card-icon { position: relative; display: inline-block; margin-bottom: 12px; }
-    #coverage .coverage-card-icon i { color: var(--color-primary-accent); font-size: 28px; position: relative; z-index: 1; }
-    #coverage .coverage-card-icon::before { content: ''; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; background: var(--color-primary-accent); border-radius: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0.5); animation: coveragePulse 2.5s ease-in-out infinite; z-index: 0; }
-    @keyframes coveragePulse { 0% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.5); } 50% { opacity: 0; transform: translate(-50%, -50%) scale(1.3); } 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(0.5); } }
-    #coverage .coverage-card-state { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--color-primary-dark); margin-bottom: 4px; }
-    #coverage .coverage-subtext { margin: 0 auto 60px auto; }
+    #coverage {
+      background: var(--color-white);
+    }
 
-    #founder { background: var(--color-bg-light); }
-    #founder .founder-grid { display: flex; align-items: center; gap: 60px; }
-    #founder .founder-image-col { flex: 0 0 40%; max-width: 40%; }
-    #founder .founder-content-col { flex: 1; }
-    #founder .founder-image-wrapper { position: relative; }
-    #founder .founder-image-wrapper img { border-radius: 12px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); width: 100%; object-fit: cover; }
-    #founder .founder-image-wrapper::after { content: ''; position: absolute; bottom: -12px; left: -12px; width: 80px; height: 80px; border-left: 4px solid var(--color-primary-accent); border-bottom: 4px solid var(--color-primary-accent); border-radius: 0 0 0 12px; z-index: -1; }
-    #founder .founder-heading { font-size: 36px; }
-    #founder .founder-quote { border-left: 3px solid var(--color-primary-accent); padding-left: 24px; margin-bottom: 28px; }
-    #founder .founder-quote-icon { color: var(--color-primary-accent); font-size: 36px; opacity: 0.5; margin-bottom: 8px; }
-    #founder .founder-quote-text { font-family: var(--font-heading); font-size: 20px; font-style: italic; color: var(--color-primary-dark); line-height: 1.5; }
-    #founder .founder-paragraph { font-family: var(--font-body); font-size: 16px; color: var(--color-secondary); line-height: 1.7; margin-bottom: 20px; }
-    #founder .founder-signature { font-family: var(--font-heading); font-size: 18px; font-style: italic; color: var(--color-primary-dark); display: inline-block; position: relative; }
-    #founder .founder-signature::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 40px; height: 2px; background: var(--color-primary-accent); }
+    #coverage .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #coverage .coverage-card {
+      background: var(--color-bg-light);
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: var(--transition-default);
+      border-bottom: 3px solid transparent;
+      position: relative;
+    }
+
+    #coverage .coverage-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-bottom: 3px solid var(--color-primary-accent);
+    }
+
+    #coverage .coverage-card-icon {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    #coverage .coverage-card-icon i {
+      color: var(--color-primary-accent);
+      font-size: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #coverage .coverage-card-icon::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary-accent);
+      border-radius: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+      animation: coveragePulse 2.5s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes coveragePulse {
+      0% {
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+
+      50% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+
+      100% {
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+    }
+
+    #coverage .coverage-card-state {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 4px;
+    }
+
+    #coverage .coverage-subtext {
+      margin: 0 auto 60px auto;
+    }
+
+    #founder {
+      background: var(--color-bg-light);
+    }
+
+    #founder .founder-grid {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    #founder .founder-image-col {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    #founder .founder-content-col {
+      flex: 1;
+    }
+
+    #founder .founder-image-wrapper {
+      position: relative;
+    }
+
+    #founder .founder-image-wrapper img {
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #founder .founder-image-wrapper::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: -12px;
+      width: 80px;
+      height: 80px;
+      border-left: 4px solid var(--color-primary-accent);
+      border-bottom: 4px solid var(--color-primary-accent);
+      border-radius: 0 0 0 12px;
+      z-index: -1;
+    }
+
+    #founder .founder-heading {
+      font-size: 36px;
+    }
+
+    #founder .founder-quote {
+      border-left: 3px solid var(--color-primary-accent);
+      padding-left: 24px;
+      margin-bottom: 28px;
+    }
+
+    #founder .founder-quote-icon {
+      color: var(--color-primary-accent);
+      font-size: 36px;
+      opacity: 0.5;
+      margin-bottom: 8px;
+    }
+
+    #founder .founder-quote-text {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-style: italic;
+      color: var(--color-primary-dark);
+      line-height: 1.5;
+    }
+
+    #founder .founder-paragraph {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--color-secondary);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    #founder .founder-signature {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--color-primary-dark);
+      display: inline-block;
+      position: relative;
+    }
+
+    #founder .founder-signature::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background: var(--color-primary-accent);
+    }
 
     @media (max-width: 1024px) {
-      #coverage .coverage-grid { grid-template-columns: repeat(2, 1fr); }
-      #founder .founder-grid { gap: 40px; }
-      #founder .founder-heading { font-size: 32px; }
+      #coverage .coverage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      #founder .founder-grid {
+        gap: 40px;
+      }
+
+      #founder .founder-heading {
+        font-size: 32px;
+      }
     }
+
     @media (max-width: 768px) {
-      #coverage .coverage-grid { grid-template-columns: 1fr; max-width: 400px; }
-      #founder .founder-grid { flex-direction: column; gap: 40px; }
-      #founder .founder-image-col { flex: none; max-width: 100%; width: 100%; }
-      #founder .founder-image-wrapper img { max-height: 350px; object-fit: cover; width: 100%; }
-      #founder .founder-image-wrapper::after { display: none; }
-      #founder .founder-quote-text { font-size: 18px; }
-      #founder .founder-heading { font-size: 30px; }
+      #coverage .coverage-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+      }
+
+      #founder .founder-grid {
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      #founder .founder-image-col {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      #founder .founder-image-wrapper img {
+        max-height: 350px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      #founder .founder-image-wrapper::after {
+        display: none;
+      }
+
+      #founder .founder-quote-text {
+        font-size: 18px;
+      }
+
+      #founder .founder-heading {
+        font-size: 30px;
+      }
     }
+
     @media (max-width: 480px) {
-      #coverage .coverage-card { padding: 24px 16px; }
-      #coverage .coverage-card-state { font-size: 22px; }
-      #coverage .coverage-grid { max-width: 100%; }
-      #founder .founder-quote-text { font-size: 17px; }
-      #founder .founder-image-wrapper img { max-height: 260px; }
-      #founder .founder-heading { font-size: 26px; }
+      #coverage .coverage-card {
+        padding: 24px 16px;
+      }
+
+      #coverage .coverage-card-state {
+        font-size: 22px;
+      }
+
+      #coverage .coverage-grid {
+        max-width: 100%;
+      }
+
+      #founder .founder-quote-text {
+        font-size: 17px;
+      }
+
+      #founder .founder-image-wrapper img {
+        max-height: 260px;
+      }
+
+      #founder .founder-heading {
+        font-size: 26px;
+      }
     }
 
     /* ================================================
        SECTION 06 — Values + Testimonials
        ================================================ */
-    #values { background: var(--color-primary-dark); padding: 80px 0; }
-    #values .values-header { text-align: center; margin-bottom: 48px; }
-    #values .section-heading { color: var(--color-white); }
-    #values .values-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 0; position: relative; }
-    #values .value-card { flex-basis: 20%; padding: 30px 28px; text-align: center; border-right: 1px solid rgba(200, 164, 92, 0.2); }
-    #values .value-card:last-child { border-right: none; }
-    #values .value-card-icon { color: var(--color-primary-accent); font-size: 28px; margin-bottom: 16px; }
-    #values .value-card-title { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--color-white); margin: 0 0 8px 0; }
-    #values .value-card-desc { font-family: var(--font-body); font-size: 14px; color: rgba(255, 255, 255, 0.6); line-height: 1.5; margin: 0; }
+    #values {
+      background: var(--color-primary-dark);
+      padding: 80px 0;
+    }
+
+    #values .values-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    #values .section-heading {
+      color: var(--color-white);
+    }
+
+    #values .values-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      position: relative;
+    }
+
+    #values .value-card {
+      flex-basis: 20%;
+      padding: 30px 28px;
+      text-align: center;
+      border-right: 1px solid rgba(200, 164, 92, 0.2);
+    }
+
+    #values .value-card:last-child {
+      border-right: none;
+    }
+
+    #values .value-card-icon {
+      color: var(--color-primary-accent);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    #values .value-card-title {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin: 0 0 8px 0;
+    }
+
+    #values .value-card-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+      margin: 0;
+    }
 
 
     @media (max-width: 1024px) {
-      #values .value-card { flex-basis: 33.333%; }
-      #values .value-card:nth-child(3n) { border-right: none; }
+      #values .value-card {
+        flex-basis: 33.333%;
+      }
+
+      #values .value-card:nth-child(3n) {
+        border-right: none;
+      }
     }
+
     @media (max-width: 768px) {
-      #values { padding: 60px 0; }
-      #values .values-row { flex-wrap: wrap; justify-content: center; }
-      #values .value-card { flex-basis: calc(50% - 1px); border-right: none; border-bottom: 1px solid rgba(200, 164, 92, 0.2); }
-      #values .value-card:last-child { border-bottom: none; }
-      #values .values-scroll-wrapper::after { display: none; }
-      #values .section-heading { font-size: 32px; }
+      #values {
+        padding: 60px 0;
+      }
+
+      #values .values-row {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #values .value-card {
+        flex-basis: calc(50% - 1px);
+        border-right: none;
+        border-bottom: 1px solid rgba(200, 164, 92, 0.2);
+      }
+
+      #values .value-card:last-child {
+        border-bottom: none;
+      }
+
+      #values .values-scroll-wrapper::after {
+        display: none;
+      }
+
+      #values .section-heading {
+        font-size: 32px;
+      }
     }
+
     @media (max-width: 480px) {
-      #values { padding: 48px 0; }
-      #values .value-card { flex-basis: 100%; padding: 24px 20px; }
+      #values {
+        padding: 48px 0;
+      }
+
+      #values .value-card {
+        flex-basis: 100%;
+        padding: 24px 20px;
+      }
     }
 
     /* ================================================
        SECTION 07 — Contact
        ================================================ */
-    #contact { background: var(--color-bg-light); }
-    #contact .contact-grid { display: flex; gap: 60px; align-items: flex-start; justify-content: center; }
-    #contact .contact-info { flex: 0 1 600px; max-width: 600px; }
-    #contact .contact-card { background: var(--color-white); border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; box-shadow: var(--shadow-card); display: flex; align-items: center; gap: 20px; transition: var(--transition-default); border-left: 3px solid transparent; }
-    #contact .contact-card:hover { transform: translateX(6px); border-left: 3px solid var(--color-primary-accent); }
-    #contact .contact-card-icon { width: 48px; height: 48px; min-width: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; }
-    #contact .contact-card-icon.gold { background: rgba(200, 164, 92, 0.12); color: var(--color-primary-accent); }
-    #contact .contact-card-icon.whatsapp { background: rgba(37, 211, 102, 0.1); color: #25D366; }
-    #contact .contact-card-content { flex: 1; min-width: 0; }
-    #contact .contact-card-title { font-family: var(--font-body); font-size: 16px; font-weight: 600; color: var(--color-primary-dark); margin-bottom: 2px; }
-    #contact .contact-card-value { font-family: var(--font-body); font-size: 15px; color: var(--color-secondary); margin-bottom: 2px; overflow-wrap: break-word; word-break: break-word; }
-    #contact .contact-card-value a { color: inherit; text-decoration: none; transition: var(--transition-default); }
-    #contact .contact-card-value a:hover { color: var(--color-primary-accent); }
-    #contact .contact-card-value.accent a { color: var(--color-primary-accent); }
-    #contact .contact-card-sub { font-family: var(--font-body); font-size: 13px; color: var(--color-muted); }
-    #contact .social-heading { font-family: var(--font-body); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--color-muted); margin: 28px 0 16px; }
-    #contact .social-links { display: flex; gap: 12px; }
-    #contact .social-link { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(200, 164, 92, 0.3); display: flex; align-items: center; justify-content: center; color: var(--color-muted); text-decoration: none; transition: var(--transition-default); font-size: 16px; }
-    #contact .social-link:hover { background: var(--color-primary-accent); color: var(--color-white); border-color: var(--color-primary-accent); transform: translateY(-3px); }
+    #contact {
+      background: var(--color-bg-light);
+    }
+
+    #contact .contact-grid {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    #contact .contact-info {
+      flex: 0 1 600px;
+      max-width: 600px;
+    }
+
+    #contact .contact-card {
+      background: var(--color-white);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: var(--transition-default);
+      border-left: 3px solid transparent;
+    }
+
+    #contact .contact-card:hover {
+      transform: translateX(6px);
+      border-left: 3px solid var(--color-primary-accent);
+    }
+
+    #contact .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    #contact .contact-card-icon.gold {
+      background: rgba(200, 164, 92, 0.12);
+      color: var(--color-primary-accent);
+    }
+
+    #contact .contact-card-icon.whatsapp {
+      background: rgba(37, 211, 102, 0.1);
+      color: #25D366;
+    }
+
+    #contact .contact-card-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    #contact .contact-card-title {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-bottom: 2px;
+    }
+
+    #contact .contact-card-value {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--color-secondary);
+      margin-bottom: 2px;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    #contact .contact-card-value a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #contact .contact-card-value a:hover {
+      color: var(--color-primary-accent);
+    }
+
+    #contact .contact-card-value.accent a {
+      color: var(--color-primary-accent);
+    }
+
+    #contact .contact-card-sub {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+
+    #contact .social-heading {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-muted);
+      margin: 28px 0 16px;
+    }
+
+    #contact .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    #contact .social-link {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(200, 164, 92, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-muted);
+      text-decoration: none;
+      transition: var(--transition-default);
+      font-size: 16px;
+    }
+
+    #contact .social-link:hover {
+      background: var(--color-primary-accent);
+      color: var(--color-white);
+      border-color: var(--color-primary-accent);
+      transform: translateY(-3px);
+    }
 
     @media (max-width: 768px) {
-      #contact .contact-info { flex: 1 1 100%; max-width: 100%; }
-      #contact .contact-card { padding: 20px 20px; }
-      #contact .social-links { justify-content: center; }
+      #contact .contact-info {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      #contact .contact-card {
+        padding: 20px 20px;
+      }
+
+      #contact .social-links {
+        justify-content: center;
+      }
     }
+
     @media (max-width: 480px) {
-      #contact .contact-card { padding: 16px; }
+      #contact .contact-card {
+        padding: 16px;
+      }
     }
 
     /* ================================================
        SECTION 08 — CTA + Footer
        ================================================ */
-    #cta { position: relative; background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover fixed no-repeat; padding: 120px 0; overflow: hidden; }
-    #cta::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,35,50,0.9) 0%, rgba(26,35,50,0.75) 100%); z-index: 1; }
-    #cta .container { position: relative; z-index: 2; }
-    #cta .cta-content { max-width: 700px; margin: 0 auto; text-align: center; }
-    #cta .cta-heading { font-family: var(--font-heading); font-size: 44px; font-weight: 700; color: var(--color-white); line-height: 1.2; margin-bottom: 0; }
-    #cta .cta-subtext { font-family: var(--font-body); font-size: 18px; color: rgba(255,255,255,0.8); line-height: 1.7; margin: 20px auto 40px; }
-    #cta .cta-btn { padding: 20px 50px; font-size: 17px; display: inline-block; animation: ctaPulse 2s infinite; }
-    @keyframes ctaPulse { 0% { box-shadow: 0 0 0 0 rgba(200,164,92,0.4); } 70% { box-shadow: 0 0 0 20px rgba(200,164,92,0); } 100% { box-shadow: 0 0 0 0 rgba(200,164,92,0); } }
-    #cta .cta-disclaimer { font-family: var(--font-body); font-size: 14px; font-style: italic; color: rgba(255,255,255,0.5); margin-top: 20px; }
+    #cta {
+      position: relative;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover fixed no-repeat;
+      padding: 120px 0;
+      overflow: hidden;
+    }
 
-    #footer { background: var(--color-footer-dark); border-top: 2px solid var(--color-primary-accent); padding: 70px 0 0 0; }
-    #footer .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
-    #footer .footer-logo { font-family: var(--font-heading); font-size: 18px; color: var(--color-white); font-weight: 700; letter-spacing: 1px; }
-    #footer .footer-logo .logo-diamond { color: var(--color-primary-accent); margin: 0 6px; }
-    #footer .footer-tagline { font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6; margin: 16px 0 24px; }
-    #footer .footer-social { display: flex; gap: 10px; }
-    #footer .footer-social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 14px; text-decoration: none; transition: var(--transition-default); }
-    #footer .footer-social a:hover { background: var(--color-primary-accent); color: var(--color-white); border-color: var(--color-primary-accent); }
-    #footer .footer-col-heading { font-family: var(--font-body); font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--color-white); margin-bottom: 20px; }
-    #footer .footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
-    #footer .footer-links a { font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: var(--transition-default); }
-    #footer .footer-links a:hover { color: var(--color-primary-accent); }
-    #footer .footer-contact-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 16px; }
-    #footer .footer-contact-list li { font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.5); display: flex; align-items: flex-start; }
-    #footer .footer-contact-list i { color: var(--color-primary-accent); font-size: 14px; margin-right: 10px; margin-top: 2px; min-width: 16px; }
-    #footer .footer-contact-list a { font-family: var(--font-body); font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: var(--transition-default); }
-    #footer .footer-contact-list a:hover { color: var(--color-white); }
-    #footer .footer-bottom { background: rgba(0,0,0,0.2); margin-top: 50px; padding: 20px 0; }
-    #footer .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; }
-    #footer .footer-copyright { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.35); }
-    #footer .footer-legal { font-family: var(--font-body); font-size: 13px; color: rgba(255,255,255,0.35); }
-    #footer .footer-legal a { color: rgba(255,255,255,0.35); text-decoration: none; transition: var(--transition-default); }
-    #footer .footer-legal a:hover { color: var(--color-white); }
-    #footer .footer-legal .separator { margin: 0 12px; }
+    #cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26, 35, 50, 0.9) 0%, rgba(26, 35, 50, 0.75) 100%);
+      z-index: 1;
+    }
+
+    #cta .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #cta .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #cta .cta-heading {
+      font-family: var(--font-heading);
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+
+    #cta .cta-subtext {
+      font-family: var(--font-body);
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin: 20px auto 40px;
+    }
+
+    #cta .cta-btn {
+      padding: 20px 50px;
+      font-size: 17px;
+      display: inline-block;
+      animation: ctaPulse 2s infinite;
+    }
+
+    @keyframes ctaPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(200, 164, 92, 0.4);
+      }
+
+      70% {
+        box-shadow: 0 0 0 20px rgba(200, 164, 92, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(200, 164, 92, 0);
+      }
+    }
+
+    #cta .cta-disclaimer {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 20px;
+    }
+
+    #footer {
+      background: var(--color-footer-dark);
+      border-top: 2px solid var(--color-primary-accent);
+      padding: 70px 0 0 0;
+    }
+
+    #footer .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 40px;
+    }
+
+    #footer .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--color-white);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    #footer .footer-logo .logo-diamond {
+      color: var(--color-primary-accent);
+      margin: 0 6px;
+    }
+
+    #footer .footer-tagline {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.6;
+      margin: 16px 0 24px;
+    }
+
+    #footer .footer-social {
+      display: flex;
+      gap: 10px;
+    }
+
+    #footer .footer-social a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #footer .footer-social a:hover {
+      background: var(--color-primary-accent);
+      color: var(--color-white);
+      border-color: var(--color-primary-accent);
+    }
+
+    #footer .footer-col-heading {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-white);
+      margin-bottom: 20px;
+    }
+
+    #footer .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    #footer .footer-links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #footer .footer-links a:hover {
+      color: var(--color-primary-accent);
+    }
+
+    #footer .footer-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    #footer .footer-contact-list li {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: flex-start;
+    }
+
+    #footer .footer-contact-list i {
+      color: var(--color-primary-accent);
+      font-size: 14px;
+      margin-right: 10px;
+      margin-top: 2px;
+      min-width: 16px;
+    }
+
+    #footer .footer-contact-list a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #footer .footer-contact-list a:hover {
+      color: var(--color-white);
+    }
+
+    #footer .footer-bottom {
+      background: rgba(0, 0, 0, 0.2);
+      margin-top: 50px;
+      padding: 20px 0;
+    }
+
+    #footer .footer-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #footer .footer-copyright {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    #footer .footer-legal {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    #footer .footer-legal a {
+      color: rgba(255, 255, 255, 0.35);
+      text-decoration: none;
+      transition: var(--transition-default);
+    }
+
+    #footer .footer-legal a:hover {
+      color: var(--color-white);
+    }
+
+    #footer .footer-legal .separator {
+      margin: 0 12px;
+    }
 
     @media (max-width: 1024px) {
-      #cta .cta-heading { font-size: 38px; }
-      #cta { padding: 100px 0; }
-      #footer .footer-grid { grid-template-columns: 1fr 1fr; }
+      #cta .cta-heading {
+        font-size: 38px;
+      }
+
+      #cta {
+        padding: 100px 0;
+      }
+
+      #footer .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
     @media (max-width: 768px) {
-      #cta { background-attachment: scroll; padding: 80px 0; }
-      #cta .cta-heading { font-size: 32px; }
-      #cta .cta-btn { padding: 18px 36px; }
-      #footer { padding: 50px 0 0 0; }
-      #footer .footer-grid { grid-template-columns: 1fr; }
-      #footer .footer-grid > div { margin-bottom: 40px; }
-      #footer .footer-grid > div:last-child { margin-bottom: 0; }
-      #footer .footer-bottom-inner { flex-direction: column; text-align: center; gap: 8px; }
-      #footer .footer-social a { width: 44px; height: 44px; }
+      #cta {
+        background-attachment: scroll;
+        padding: 80px 0;
+      }
+
+      #cta .cta-heading {
+        font-size: 32px;
+      }
+
+      #cta .cta-btn {
+        padding: 18px 36px;
+      }
+
+      #footer {
+        padding: 50px 0 0 0;
+      }
+
+      #footer .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #footer .footer-grid>div {
+        margin-bottom: 40px;
+      }
+
+      #footer .footer-grid>div:last-child {
+        margin-bottom: 0;
+      }
+
+      #footer .footer-bottom-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+      }
+
+      #footer .footer-social a {
+        width: 44px;
+        height: 44px;
+      }
     }
+
     @media (max-width: 480px) {
-      #cta .cta-heading { font-size: 28px; }
-      #cta .cta-subtext { font-size: 16px; }
-      #cta .cta-btn { padding: 16px 30px; font-size: 15px; }
-      #cta { padding: 60px 0; }
-      #cta .cta-disclaimer { font-size: 12px; }
-      #footer { padding: 40px 0 0 0; }
-      #footer .footer-grid > div { margin-bottom: 28px; }
-      #footer .footer-tagline { font-size: 13px; }
-      #footer .footer-links a { font-size: 13px; }
-      #footer .footer-contact-list li { font-size: 13px; }
-      #footer .footer-contact-list a { font-size: 13px; }
-      #footer .footer-bottom { margin-top: 32px; }
-      #footer .footer-copyright { font-size: 12px; }
-      #footer .footer-legal { font-size: 12px; }
+      #cta .cta-heading {
+        font-size: 28px;
+      }
+
+      #cta .cta-subtext {
+        font-size: 16px;
+      }
+
+      #cta .cta-btn {
+        padding: 16px 30px;
+        font-size: 15px;
+      }
+
+      #cta {
+        padding: 60px 0;
+      }
+
+      #cta .cta-disclaimer {
+        font-size: 12px;
+      }
+
+      #footer {
+        padding: 40px 0 0 0;
+      }
+
+      #footer .footer-grid>div {
+        margin-bottom: 28px;
+      }
+
+      #footer .footer-tagline {
+        font-size: 13px;
+      }
+
+      #footer .footer-links a {
+        font-size: 13px;
+      }
+
+      #footer .footer-contact-list li {
+        font-size: 13px;
+      }
+
+      #footer .footer-contact-list a {
+        font-size: 13px;
+      }
+
+      #footer .footer-bottom {
+        margin-top: 32px;
+      }
+
+      #footer .footer-copyright {
+        font-size: 12px;
+      }
+
+      #footer .footer-legal {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- ================================================
@@ -858,8 +2260,10 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="btn-primary navbar-cta navbar-cta-desktop">Book a Strategy Call</a>
-      <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+      <a href="#contact" class="btn-primary navbar-cta navbar-cta-desktop">Book
+        a Strategy Call</a>
+      <div class="hamburger" aria-label="Toggle navigation" role="button"
+        tabindex="0">
         <span></span>
         <span></span>
         <span></span>
@@ -872,7 +2276,8 @@
           <li><a href="#coverage">Where We Buy</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn-primary mobile-cta">Book a Strategy Call</a>
+        <a href="#contact" class="btn-primary mobile-cta">Book a Strategy
+          Call</a>
       </div>
     </div>
   </header>
@@ -887,7 +2292,9 @@
       <div class="hero-content">
         <p class="overline hero-overline">Australia's Trusted Buyer's Agency</p>
         <h1 class="hero-title">Guiding You to Smarter Property Decisions</h1>
-        <p class="hero-subtext">We are more than a buyers agency — we are your strategic partner, dedicated to helping you navigate the property market with confidence and achieve long-term wealth.</p>
+        <p class="hero-subtext">We are more than a buyers agency — we are your
+          strategic partner, dedicated to helping you navigate the property
+          market with confidence and achieve long-term wealth.</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn-primary">Book a Free Strategy Call</a>
           <a href="#method" class="btn-secondary">See How We Work</a>
@@ -904,11 +2311,23 @@
     <section id="brand-story" class="section">
       <div class="container">
         <div class="brand-story-inner">
-          <div class="brand-icon fade-in-up"><i class="fas fa-house-chimney"></i></div>
+          <div class="brand-icon fade-in-up"><i
+              class="fas fa-house-chimney"></i></div>
           <p class="overline fade-in-up">OUR PURPOSE</p>
-          <h2 class="section-heading fade-in-up">Why Guidestone Property Exists</h2>
-          <p class="brand-paragraph fade-in-up">Property decisions shape financial futures — but the path is often unclear and stressful. Guidestone Property was created to bring structure, insight, and confidence to that journey. Like a guiding marker that shows the way forward, we help our clients move with clarity, strategy, and certainty toward long-term wealth.</p>
-          <p class="brand-paragraph fade-in-up">We are more than a buyers agency — we are your strategic partner, dedicated to helping you navigate the property market with confidence and achieve long-term wealth. We guide home buyers and investors through every step of the property journey, combining strategy, research, and expertise to secure the right property with confidence.</p>
+          <h2 class="section-heading fade-in-up">Why Guidestone Property Exists
+          </h2>
+          <p class="brand-paragraph fade-in-up">Property decisions shape
+            financial futures — but the path is often unclear and stressful.
+            Guidestone Property was created to bring structure, insight, and
+            confidence to that journey. Like a guiding marker that shows the way
+            forward, we help our clients move with clarity, strategy, and
+            certainty toward long-term wealth.</p>
+          <p class="brand-paragraph fade-in-up">We are more than a buyers agency
+            — we are your strategic partner, dedicated to helping you navigate
+            the property market with confidence and achieve long-term wealth. We
+            guide home buyers and investors through every step of the property
+            journey, combining strategy, research, and expertise to secure the
+            right property with confidence.</p>
         </div>
       </div>
     </section>
@@ -919,7 +2338,8 @@
     <section id="stats" class="stats-bar">
       <div class="stats-grid">
         <div class="stat-item fade-in-up" data-delay="0">
-          <span class="stat-number count-up" data-target="60" data-suffix="+">0</span>
+          <span class="stat-number count-up" data-target="60"
+            data-suffix="+">0</span>
           <span class="stat-label">Properties Secured Across Australia</span>
         </div>
       </div>
@@ -933,43 +2353,58 @@
         <div class="why-us-grid">
           <div class="why-us-content">
             <p class="overline fade-in-up">WHY GUIDESTONE</p>
-            <h2 class="section-heading fade-in-up">Your Partner in Confident Property Decisions</h2>
-            <p class="why-us-body fade-in-up">Buying property is one of the most significant financial decisions you'll ever make. At Guidestone Property, we remove uncertainty by providing the clarity and strategy you need.</p>
+            <h2 class="section-heading fade-in-up">Your Partner in Confident
+              Property Decisions</h2>
+            <p class="why-us-body fade-in-up">Buying property is one of the most
+              significant financial decisions you'll ever make. At Guidestone
+              Property, we remove uncertainty by providing the clarity and
+              strategy you need.</p>
             <ul class="why-us-benefits">
               <li class="why-us-benefit fade-in-up" data-delay="0">
-                <div class="benefit-icon"><i class="fas fa-shield-halved"></i></div>
+                <div class="benefit-icon"><i class="fas fa-shield-halved"></i>
+                </div>
                 <div class="benefit-content">
                   <h3 class="benefit-title">Strategic Guidance</h3>
-                  <p class="benefit-desc">Clear, actionable insights to make informed choices.</p>
+                  <p class="benefit-desc">Clear, actionable insights to make
+                    informed choices.</p>
                 </div>
               </li>
               <li class="why-us-benefit fade-in-up" data-delay="150">
-                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="benefit-icon"><i class="fas fa-chart-line"></i>
+                </div>
                 <div class="benefit-content">
                   <h3 class="benefit-title">Market Expertise</h3>
-                  <p class="benefit-desc">Local knowledge and investment analysis that maximizes results.</p>
+                  <p class="benefit-desc">Local knowledge and investment
+                    analysis that maximizes results.</p>
                 </div>
               </li>
               <li class="why-us-benefit fade-in-up" data-delay="300">
                 <div class="benefit-icon"><i class="fas fa-user"></i></div>
                 <div class="benefit-content">
                   <h3 class="benefit-title">Personalized Support</h3>
-                  <p class="benefit-desc">Solutions tailored to your goals and lifestyle.</p>
+                  <p class="benefit-desc">Solutions tailored to your goals and
+                    lifestyle.</p>
                 </div>
               </li>
               <li class="why-us-benefit fade-in-up" data-delay="450">
-                <div class="benefit-icon"><i class="fas fa-circle-check"></i></div>
+                <div class="benefit-icon"><i class="fas fa-circle-check"></i>
+                </div>
                 <div class="benefit-content">
                   <h3 class="benefit-title">Stress-Free Experience</h3>
-                  <p class="benefit-desc">From first viewing to settlement, we manage the details.</p>
+                  <p class="benefit-desc">From first viewing to settlement, we
+                    manage the details.</p>
                 </div>
               </li>
             </ul>
-            <a href="#contact" class="why-us-cta fade-in-up">Start Your Property Journey &rarr;</a>
+            <a href="#contact" class="why-us-cta fade-in-up">Start Your Property
+              Journey &rarr;</a>
           </div>
           <div class="why-us-image-col">
             <div class="why-us-image-wrapper fade-in-up">
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Modern Australian property exterior" class="why-us-image" loading="lazy" decoding="async">
+              <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+                alt="Modern Australian property exterior" class="why-us-image"
+                loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -983,38 +2418,46 @@
       <div class="container">
         <div class="services-header">
           <p class="overline fade-in-up">WHAT WE DO</p>
-          <h2 class="section-heading fade-in-up">Tailored Services for Every Property Goal</h2>
-          <p class="section-subtext fade-in-up">Whether you're buying your first home, growing an investment portfolio, or bidding at auction — we've got you covered.</p>
+          <h2 class="section-heading fade-in-up">Tailored Services for Every
+            Property Goal</h2>
+          <p class="section-subtext fade-in-up">Whether you're buying your first
+            home, growing an investment portfolio, or bidding at auction — we've
+            got you covered.</p>
         </div>
         <div class="services-grid">
           <div class="service-card fade-in-up" data-delay="0">
             <div class="service-icon"><i class="fas fa-home"></i></div>
             <h3 class="service-name">HomePath Acquisition</h3>
-            <p class="service-desc">Helping first-home buyers and upgraders secure the perfect property with minimal stress.</p>
+            <p class="service-desc">Helping first-home buyers and upgraders
+              secure the perfect property with minimal stress.</p>
             <a href="#contact" class="service-link">Learn More &rarr;</a>
           </div>
           <div class="service-card fade-in-up" data-delay="150">
             <div class="service-icon"><i class="fas fa-chart-line"></i></div>
             <h3 class="service-name">WealthTrack Strategy</h3>
-            <p class="service-desc">Tailored investment plans to build property portfolios and long-term wealth.</p>
+            <p class="service-desc">Tailored investment plans to build property
+              portfolios and long-term wealth.</p>
             <a href="#contact" class="service-link">Learn More &rarr;</a>
           </div>
           <div class="service-card fade-in-up" data-delay="300">
             <div class="service-icon"><i class="fas fa-piggy-bank"></i></div>
             <h3 class="service-name">SMSF Property Guidance</h3>
-            <p class="service-desc">Strategic guidance for SMSF investors planning for retirement.</p>
+            <p class="service-desc">Strategic guidance for SMSF investors
+              planning for retirement.</p>
             <a href="#contact" class="service-link">Learn More &rarr;</a>
           </div>
           <div class="service-card fade-in-up" data-delay="450">
             <div class="service-icon"><i class="fas fa-gavel"></i></div>
             <h3 class="service-name">Precision Bidding Service</h3>
-            <p class="service-desc">Expert representation at auctions to secure your property at the right price.</p>
+            <p class="service-desc">Expert representation at auctions to secure
+              your property at the right price.</p>
             <a href="#contact" class="service-link">Learn More &rarr;</a>
           </div>
           <div class="service-card fade-in-up" data-delay="600">
             <div class="service-icon"><i class="fas fa-handshake"></i></div>
             <h3 class="service-name">Complete Guided Purchase</h3>
-            <p class="service-desc">From research to settlement, we manage every detail for a seamless experience.</p>
+            <p class="service-desc">From research to settlement, we manage every
+              detail for a seamless experience.</p>
             <a href="#contact" class="service-link">Learn More &rarr;</a>
           </div>
         </div>
@@ -1028,44 +2471,55 @@
       <div class="container">
         <div class="pathway-header">
           <p class="overline fade-in-up">YOUR JOURNEY</p>
-          <h2 class="section-heading fade-in-up">A Structured Pathway to Smarter Property Decisions</h2>
+          <h2 class="section-heading fade-in-up">A Structured Pathway to Smarter
+            Property Decisions</h2>
         </div>
         <div class="pathway-grid">
           <div class="pathway-card fade-in-up" data-delay="0">
-            <div class="pathway-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="pathway-icon"><i class="fas fa-graduation-cap"></i>
+            </div>
             <h3 class="pathway-step-name">Foundation</h3>
             <p class="pathway-subtitle">Education &amp; Goal Setting</p>
-            <p class="pathway-desc">Learn the property fundamentals, market trends, growth opportunities, investment strategies and align it with your goals.</p>
+            <p class="pathway-desc">Learn the property fundamentals, market
+              trends, growth opportunities, investment strategies and align it
+              with your goals.</p>
           </div>
           <div class="pathway-card fade-in-up" data-delay="100">
             <div class="pathway-icon"><i class="fas fa-compass"></i></div>
             <h3 class="pathway-step-name">Clarity</h3>
             <p class="pathway-subtitle">Discovery &amp; Strategy</p>
-            <p class="pathway-desc">We refine your goals into a tailored property strategy.</p>
+            <p class="pathway-desc">We refine your goals into a tailored
+              property strategy.</p>
           </div>
           <div class="pathway-card fade-in-up" data-delay="200">
-            <div class="pathway-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+            <div class="pathway-icon"><i
+                class="fas fa-magnifying-glass-chart"></i></div>
             <h3 class="pathway-step-name">Research</h3>
-            <p class="pathway-subtitle">Market Insight &amp; Opportunity Search</p>
-            <p class="pathway-desc">Analyse markets, suburbs, and property opportunities.</p>
+            <p class="pathway-subtitle">Market Insight &amp; Opportunity Search
+            </p>
+            <p class="pathway-desc">Analyse markets, suburbs, and property
+              opportunities.</p>
           </div>
           <div class="pathway-card fade-in-up" data-delay="300">
             <div class="pathway-icon"><i class="fas fa-list-check"></i></div>
             <h3 class="pathway-step-name">Selection</h3>
             <p class="pathway-subtitle">Smart Shortlist &amp; Negotiation</p>
-            <p class="pathway-desc">Evaluate, shortlist, and negotiate for the right property.</p>
+            <p class="pathway-desc">Evaluate, shortlist, and negotiate for the
+              right property.</p>
           </div>
           <div class="pathway-card fade-in-up" data-delay="400">
             <div class="pathway-icon"><i class="fas fa-file-contract"></i></div>
             <h3 class="pathway-step-name">Acquisition</h3>
             <p class="pathway-subtitle">Contract to Settlement</p>
-            <p class="pathway-desc">Manage inspections, finance, legal steps, and settlement.</p>
+            <p class="pathway-desc">Manage inspections, finance, legal steps,
+              and settlement.</p>
           </div>
           <div class="pathway-card fade-in-up" data-delay="500">
             <div class="pathway-icon"><i class="fas fa-handshake"></i></div>
             <h3 class="pathway-step-name">Partnership</h3>
             <p class="pathway-subtitle">Ongoing Portfolio Support</p>
-            <p class="pathway-desc">Post-settlement guidance, property management, and future growth planning.</p>
+            <p class="pathway-desc">Post-settlement guidance, property
+              management, and future growth planning.</p>
           </div>
         </div>
       </div>
@@ -1078,64 +2532,97 @@
       <div class="container">
         <div class="text-center">
           <p class="overline fade-in-up">Our Process</p>
-          <h2 class="section-heading fade-in-up" data-delay="100">The Guidestone Method</h2>
-          <p class="section-subtext fade-in-up" data-delay="200" style="font-weight: 600; font-size: 20px;">Our 9-Step Property Buying Journey</p>
+          <h2 class="section-heading fade-in-up" data-delay="100">The Guidestone
+            Method</h2>
+          <p class="section-subtext fade-in-up" data-delay="200"
+            style="font-weight: 600; font-size: 20px;">Our 9-Step Property
+            Buying Journey</p>
         </div>
         <div class="method-timeline">
           <div class="method-step">
             <div class="method-circle">1</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-phone-alt"></i></div>
+              <div class="method-card-icon"><i class="fas fa-phone-alt"></i>
+              </div>
               <h3 class="method-card-title">Discovery Call</h3>
-              <p class="method-card-desc">A complimentary consultation to understand your goals, budget, timeline, and property vision. This helps determine the best path forward for your purchase.</p>
+              <p class="method-card-desc">A complimentary consultation to
+                understand your goals, budget, timeline, and property vision.
+                This helps determine the best path forward for your purchase.
+              </p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">2</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-file-signature"></i></div>
-              <h3 class="method-card-title">Engagement &amp; Strategy Session</h3>
-              <p class="method-card-desc">Once a working agreement is signed, a detailed strategy session to define the right approach. We align on your investment goals, target locations, property type, and criteria to ensure every decision supports your long-term outcomes.</p>
+              <div class="method-card-icon"><i
+                  class="fas fa-file-signature"></i></div>
+              <h3 class="method-card-title">Engagement &amp; Strategy Session
+              </h3>
+              <p class="method-card-desc">Once a working agreement is signed, a
+                detailed strategy session to define the right approach. We align
+                on your investment goals, target locations, property type, and
+                criteria to ensure every decision supports your long-term
+                outcomes.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">3</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-search-location"></i></div>
+              <div class="method-card-icon"><i
+                  class="fas fa-search-location"></i></div>
               <h3 class="method-card-title">Market Analysis</h3>
-              <p class="method-card-desc">In-depth research into suburbs, market trends, growth drivers, and property fundamentals to identify opportunities aligned with your strategy and strong long-term potential.</p>
+              <p class="method-card-desc">In-depth research into suburbs, market
+                trends, growth drivers, and property fundamentals to identify
+                opportunities aligned with your strategy and strong long-term
+                potential.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">4</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-list-check"></i></div>
-              <h3 class="method-card-title">Property Search &amp; Due Diligence</h3>
-              <p class="method-card-desc">We actively search for suitable properties including both on-market and off-market opportunities, completing due diligence. A curated shortlist of high-quality properties is presented with insights and recommendations.</p>
+              <div class="method-card-icon"><i class="fas fa-list-check"></i>
+              </div>
+              <h3 class="method-card-title">Property Search &amp; Due Diligence
+              </h3>
+              <p class="method-card-desc">We actively search for suitable
+                properties including both on-market and off-market
+                opportunities, completing due diligence. A curated shortlist of
+                high-quality properties is presented with insights and
+                recommendations.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">5</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-balance-scale"></i></div>
+              <div class="method-card-icon"><i class="fas fa-balance-scale"></i>
+              </div>
               <h3 class="method-card-title">Negotiation &amp; Secure</h3>
-              <p class="method-card-desc">We negotiate on your behalf to secure the property at the best possible price and favourable terms.</p>
+              <p class="method-card-desc">We negotiate on your behalf to secure
+                the property at the best possible price and favourable terms.
+              </p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">6</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-clipboard-check"></i></div>
+              <div class="method-card-icon"><i
+                  class="fas fa-clipboard-check"></i></div>
               <h3 class="method-card-title">Contract Management</h3>
-              <p class="method-card-desc">Managing the timelines from conditional to unconditional stage &mdash; coordinating building and pest inspections, finance &mdash; ensuring no hidden surprises and cost.</p>
+              <p class="method-card-desc">Managing the timelines from
+                conditional to unconditional stage &mdash; coordinating building
+                and pest inspections, finance &mdash; ensuring no hidden
+                surprises and cost.</p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">7</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-user-tie"></i></div>
+              <div class="method-card-icon"><i class="fas fa-user-tie"></i>
+              </div>
               <h3 class="method-card-title">Property Manager Introduction</h3>
-              <p class="method-card-desc">If the property is an investment, we introduce trusted property managers who can help maximise rental returns and manage the property effectively from day one.</p>
+              <p class="method-card-desc">If the property is an investment, we
+                introduce trusted property managers who can help maximise rental
+                returns and manage the property effectively from day one.</p>
             </div>
           </div>
           <div class="method-step">
@@ -1143,15 +2630,21 @@
             <div class="method-card">
               <div class="method-card-icon"><i class="fas fa-key"></i></div>
               <h3 class="method-card-title">Secure &amp; Settle</h3>
-              <p class="method-card-desc">We liaise with your broker, conveyancer, and agents to ensure a smooth settlement process.</p>
+              <p class="method-card-desc">We liaise with your broker,
+                conveyancer, and agents to ensure a smooth settlement process.
+              </p>
             </div>
           </div>
           <div class="method-step">
             <div class="method-circle">9</div>
             <div class="method-card">
-              <div class="method-card-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="method-card-icon"><i class="fas fa-chart-line"></i>
+              </div>
               <h3 class="method-card-title">Ongoing Partnership</h3>
-              <p class="method-card-desc">Our relationship doesn&rsquo;t end at settlement. We remain available to support you with portfolio guidance, future purchases, renovation insights, and ongoing property strategy.</p>
+              <p class="method-card-desc">Our relationship doesn&rsquo;t end at
+                settlement. We remain available to support you with portfolio
+                guidance, future purchases, renovation insights, and ongoing
+                property strategy.</p>
             </div>
           </div>
         </div>
@@ -1165,30 +2658,37 @@
       <div class="container text-center">
         <p class="overline fade-in-up">Our Reach</p>
         <h2 class="section-heading fade-in-up">We Buy Across Australia</h2>
-        <p class="section-subtext coverage-subtext fade-in-up">Our team covers major property markets across six states and territories.</p>
+        <p class="section-subtext coverage-subtext fade-in-up">Our team covers
+          major property markets across six states and territories.</p>
         <div class="coverage-grid">
           <div class="coverage-card fade-in-up" data-delay="0">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">VIC</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="100">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">NSW</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="200">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">QLD</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="300">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">SA</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="400">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">WA</div>
           </div>
           <div class="coverage-card fade-in-up" data-delay="500">
-            <div class="coverage-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="coverage-card-icon"><i
+                class="fas fa-map-marker-alt"></i></div>
             <div class="coverage-card-state">NT</div>
           </div>
         </div>
@@ -1203,18 +2703,34 @@
         <div class="founder-grid">
           <div class="founder-image-col">
             <div class="founder-image-wrapper fade-in-up">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Sonal, Founder of Guidestone Property" loading="lazy" decoding="async">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+                alt="Sonal, Founder of Guidestone Property" loading="lazy"
+                decoding="async">
             </div>
           </div>
           <div class="founder-content-col">
             <p class="overline fade-in-up">Meet the Founder</p>
-            <h2 class="section-heading founder-heading fade-in-up">Sonal &mdash; Founder, Guidestone Property</h2>
+            <h2 class="section-heading founder-heading fade-in-up">Sonal &mdash;
+              Founder, Guidestone Property</h2>
             <div class="founder-quote fade-in-up">
               <i class="fas fa-quote-left founder-quote-icon"></i>
-              <p class="founder-quote-text">Property has always been more than just an investment to me &mdash; it&rsquo;s a powerful tool to create freedom, security, and long-term wealth.</p>
+              <p class="founder-quote-text">Property has always been more than
+                just an investment to me &mdash; it&rsquo;s a powerful tool to
+                create freedom, security, and long-term wealth.</p>
             </div>
-            <p class="founder-paragraph fade-in-up">My journey into property began as an investor, driven by the belief that property can build long-term wealth and financial freedom. I stepped into the market myself, building a portfolio through buy-and-hold, renovations, subdivisions, and cash flow investing.</p>
-            <p class="founder-paragraph fade-in-up">Over three years in real estate, I&rsquo;ve helped many clients secure investment properties aligned with their long-term goals &mdash; many returning to build further on their portfolios. This experience inspired Guidestone Property: a buyers agency dedicated to guiding clients toward smarter property decisions with clarity, confidence, and a strategy-first approach.</p>
+            <p class="founder-paragraph fade-in-up">My journey into property
+              began as an investor, driven by the belief that property can build
+              long-term wealth and financial freedom. I stepped into the market
+              myself, building a portfolio through buy-and-hold, renovations,
+              subdivisions, and cash flow investing.</p>
+            <p class="founder-paragraph fade-in-up">Over three years in real
+              estate, I&rsquo;ve helped many clients secure investment
+              properties aligned with their long-term goals &mdash; many
+              returning to build further on their portfolios. This experience
+              inspired Guidestone Property: a buyers agency dedicated to guiding
+              clients toward smarter property decisions with clarity,
+              confidence, and a strategy-first approach.</p>
             <span class="founder-signature fade-in-up">&mdash; Sonal</span>
           </div>
         </div>
@@ -1233,29 +2749,35 @@
         <div class="values-scroll-wrapper">
           <div class="values-row fade-in-up" data-delay="150">
             <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="value-card-icon"><i class="fas fa-shield-halved"></i>
+              </div>
               <h3 class="value-card-title">Integrity First</h3>
-              <p class="value-card-desc">Every recommendation backed by honesty and transparency.</p>
+              <p class="value-card-desc">Every recommendation backed by honesty
+                and transparency.</p>
             </div>
             <div class="value-card">
               <div class="value-card-icon"><i class="fas fa-database"></i></div>
               <h3 class="value-card-title">Research-Led</h3>
-              <p class="value-card-desc">Data drives every step of your property journey.</p>
+              <p class="value-card-desc">Data drives every step of your property
+                journey.</p>
             </div>
             <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-user-check"></i></div>
+              <div class="value-card-icon"><i class="fas fa-user-check"></i>
+              </div>
               <h3 class="value-card-title">Client-First</h3>
               <p class="value-card-desc">Your goals guide our strategy.</p>
             </div>
             <div class="value-card">
               <div class="value-card-icon"><i class="fas fa-spa"></i></div>
               <h3 class="value-card-title">Calm &amp; Guided</h3>
-              <p class="value-card-desc">Reducing stress, increasing clarity.</p>
+              <p class="value-card-desc">Reducing stress, increasing clarity.
+              </p>
             </div>
             <div class="value-card">
               <div class="value-card-icon"><i class="fas fa-seedling"></i></div>
               <h3 class="value-card-title">Wealth Focused</h3>
-              <p class="value-card-desc">Your future success is our priority.</p>
+              <p class="value-card-desc">Your future success is our priority.
+              </p>
             </div>
           </div>
         </div>
@@ -1271,41 +2793,60 @@
         <div class="text-center fade-in-up">
           <p class="overline">GET IN TOUCH</p>
           <h2 class="section-heading">Let's Start Your Property Journey</h2>
-          <p class="section-subtext" style="margin: 0 auto 60px auto;">Let's start your property journey together. Reach out and we'll get back to you within 24 hours.</p>
+          <p class="section-subtext" style="margin: 0 auto 60px auto;">Let's
+            start your property journey together. Reach out and we'll get back
+            to you within 24 hours.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-card fade-in-up" data-delay="0">
-              <div class="contact-card-icon gold"><i class="fas fa-phone-alt"></i></div>
+              <div class="contact-card-icon gold"><i
+                  class="fas fa-phone-alt"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">Call Us</div>
-                <div class="contact-card-value"><a href="tel:+61433674084">0433 674 084</a></div>
+                <div class="contact-card-value"><a href="tel:+61433674084">0433
+                    674 084</a></div>
                 <div class="contact-card-sub">Mon – Sat, 9am – 6pm AEST</div>
               </div>
             </div>
             <div class="contact-card fade-in-up" data-delay="100">
-              <div class="contact-card-icon whatsapp"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-card-icon whatsapp"><i
+                  class="fab fa-whatsapp"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">WhatsApp</div>
-                <div class="contact-card-value"><a href="https://wa.me/61433674084" target="_blank" rel="noopener">0433 674 084</a></div>
-                <div class="contact-card-sub">Quick replies, usually within 1 hour</div>
+                <div class="contact-card-value"><a
+                    href="https://wa.me/61433674084" target="_blank"
+                    rel="noopener">0433 674 084</a></div>
+                <div class="contact-card-sub">Quick replies, usually within 1
+                  hour</div>
               </div>
             </div>
             <div class="contact-card fade-in-up" data-delay="200">
-              <div class="contact-card-icon gold"><i class="fas fa-envelope"></i></div>
+              <div class="contact-card-icon gold"><i
+                  class="fas fa-envelope"></i></div>
               <div class="contact-card-content">
                 <div class="contact-card-title">Email Us</div>
-                <div class="contact-card-value accent"><a href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a></div>
+                <div class="contact-card-value accent"><a
+                    href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a>
+                </div>
                 <div class="contact-card-sub">We respond within 24 hours</div>
               </div>
             </div>
             <div class="fade-in-up" data-delay="400">
               <div class="social-heading">Follow Us</div>
               <div class="social-links">
-                <a href="https://linkedin.com/company/guidestoneproperty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://instagram.com/guidestoneproperty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://facebook.com/guidestoneproperty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://tiktok.com/@guidestoneproperty" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://linkedin.com/company/guidestoneproperty"
+                  target="_blank" rel="noopener noreferrer" class="social-link"
+                  aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/guidestoneproperty"
+                  target="_blank" rel="noopener noreferrer" class="social-link"
+                  aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/guidestoneproperty"
+                  target="_blank" rel="noopener noreferrer" class="social-link"
+                  aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://tiktok.com/@guidestoneproperty" target="_blank"
+                  rel="noopener noreferrer" class="social-link"
+                  aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
               </div>
             </div>
           </div>
@@ -1321,9 +2862,12 @@
         <div class="cta-content fade-in-up">
           <p class="overline">TAKE THE NEXT STEP</p>
           <h2 class="cta-heading">Ready to Start Your Property Journey?</h2>
-          <p class="cta-subtext">Book a free strategy call and let's discuss how we can guide you to smarter property decisions.</p>
-          <a href="#contact" class="btn-primary cta-btn">Book Your Free Strategy Call</a>
-          <p class="cta-disclaimer">No obligation. No pressure. Just clarity.</p>
+          <p class="cta-subtext">Book a free strategy call and let's discuss how
+            we can guide you to smarter property decisions.</p>
+          <a href="#contact" class="btn-primary cta-btn">Book Your Free Strategy
+            Call</a>
+          <p class="cta-disclaimer">No obligation. No pressure. Just clarity.
+          </p>
         </div>
       </div>
     </section>
@@ -1337,12 +2881,17 @@
     <div class="container">
       <div class="footer-grid">
         <div class="fade-in-up" data-delay="0">
-          <div class="footer-logo">GUIDESTONE <span class="logo-diamond">&#9670;</span> PROPERTY</div>
-          <p class="footer-tagline">Guiding You to Smarter Property Decisions</p>
+          <div class="footer-logo">GUIDESTONE <span
+              class="logo-diamond">&#9670;</span> PROPERTY</div>
+          <p class="footer-tagline">Guiding You to Smarter Property Decisions
+          </p>
           <div class="footer-social">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
           </div>
         </div>
         <div class="fade-in-up" data-delay="100">
@@ -1368,10 +2917,16 @@
         <div class="fade-in-up" data-delay="300">
           <h3 class="footer-col-heading">Contact</h3>
           <ul class="footer-contact-list">
-            <li><i class="fas fa-envelope"></i><a href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a></li>
-            <li><i class="fas fa-phone-alt"></i><a href="tel:+61433674084">0433 674 084</a></li>
-            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/61433674084" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
-            <li><i class="fas fa-map-marker-alt"></i><span>Melbourne, Australia — Serving Nationwide</span></li>
+            <li><i class="fas fa-envelope"></i><a
+                href="mailto:connect@guidestoneproperty.com.au">connect@guidestoneproperty.com.au</a>
+            </li>
+            <li><i class="fas fa-phone-alt"></i><a href="tel:+61433674084">0433
+                674 084</a></li>
+            <li><i class="fab fa-whatsapp"></i><a
+                href="https://wa.me/61433674084" target="_blank"
+                rel="noopener noreferrer">WhatsApp Us</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Melbourne, Australia
+                — Serving Nationwide</span></li>
           </ul>
         </div>
       </div>
@@ -1379,7 +2934,8 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <p class="footer-copyright">&copy; 2026 Guidestone Property. All rights reserved.</p>
+          <p class="footer-copyright">&copy; 2026 Guidestone Property. All
+            rights reserved.</p>
           <p class="footer-legal">
             <a href="#">Privacy Policy</a>
             <span class="separator">|</span>
@@ -1394,13 +2950,13 @@
        Global JS Utilities
        ================================================ -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Scroll-triggered fade-in observer
-      var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var delay = entry.target.dataset.delay || 0;
-            setTimeout(function() {
+            setTimeout(function () {
               entry.target.classList.add('visible');
             }, parseInt(delay));
             observer.unobserve(entry.target);
@@ -1408,12 +2964,12 @@
         });
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-      document.querySelectorAll('.fade-in-up').forEach(function(el) {
+      document.querySelectorAll('.fade-in-up').forEach(function (el) {
         observer.observe(el);
       });
 
       // Counter animation utility
-      window.animateCounter = function(element, target, duration) {
+      window.animateCounter = function (element, target, duration) {
         duration = duration || 2000;
         var startTime = null;
         var suffix = element.dataset.suffix || '';
@@ -1428,8 +2984,8 @@
       };
 
       // Counter observer
-      var counterObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var target = parseInt(entry.target.dataset.target);
             window.animateCounter(entry.target, target);
@@ -1438,7 +2994,7 @@
         });
       }, { threshold: 0.3 });
 
-      document.querySelectorAll('.count-up').forEach(function(el) {
+      document.querySelectorAll('.count-up').forEach(function (el) {
         counterObserver.observe(el);
       });
     });
@@ -1448,7 +3004,7 @@
        Section 02 — Nav + Hero JS
        ================================================ -->
   <script>
-    (function() {
+    (function () {
       var navbar = document.getElementById('navbar');
 
       // Nav scroll behavior
@@ -1465,7 +3021,7 @@
       // Active link detection
       var navLinks = navbar.querySelectorAll('.navbar-nav a');
       var sections = [];
-      navLinks.forEach(function(link) {
+      navLinks.forEach(function (link) {
         var targetId = link.getAttribute('href');
         if (targetId && targetId.startsWith('#')) {
           var section = document.querySelector(targetId);
@@ -1477,11 +3033,11 @@
 
       function updateActiveLink() {
         var scrollPos = window.scrollY + 200;
-        sections.forEach(function(item) {
+        sections.forEach(function (item) {
           var top = item.el.offsetTop;
           var bottom = top + item.el.offsetHeight;
           if (scrollPos >= top && scrollPos < bottom) {
-            navLinks.forEach(function(l) { l.classList.remove('active'); });
+            navLinks.forEach(function (l) { l.classList.remove('active'); });
             item.link.classList.add('active');
           }
         });
@@ -1497,22 +3053,22 @@
         document.body.classList.toggle('nav-open');
       }
       hamburger.addEventListener('click', toggleMobileNav);
-      hamburger.addEventListener('keydown', function(e) {
+      hamburger.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           toggleMobileNav();
         }
       });
-      mobileLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
           document.body.classList.remove('nav-open');
         });
       });
 
       // Smooth scroll for nav links
       var allNavLinks = navbar.querySelectorAll('a[href^="#"]');
-      allNavLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
+      allNavLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
           var targetId = this.getAttribute('href');
           var target = document.querySelector(targetId);
           if (target) {
@@ -1525,7 +3081,7 @@
       // Hero page load animation
       var heroContent = document.querySelector('#hero .hero-content');
       if (heroContent) {
-        setTimeout(function() {
+        setTimeout(function () {
           heroContent.classList.add('hero-visible');
         }, 300);
       }
@@ -1533,7 +3089,7 @@
       // Scroll indicator fade out
       var scrollIndicator = document.querySelector('#hero .scroll-indicator');
       if (scrollIndicator) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
           scrollIndicator.style.opacity = window.scrollY > 100 ? '0' : '1';
         }, { passive: true });
       }
@@ -1544,7 +3100,7 @@
        Section 04 — Method Timeline JS
        ================================================ -->
   <script>
-    (function() {
+    (function () {
       function init() {
         var timeline = document.querySelector('#method .method-timeline');
         if (!timeline) return;
@@ -1552,8 +3108,8 @@
         var circles = timeline.querySelectorAll('.method-circle');
         var cards = timeline.querySelectorAll('.method-card');
 
-        var lineObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
+        var lineObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               timeline.classList.add('line-visible');
               lineObserver.unobserve(entry.target);
@@ -1562,25 +3118,25 @@
         }, { threshold: 0.05 });
         lineObserver.observe(timeline);
 
-        var circleObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
+        var circleObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add('pulse');
               circleObserver.unobserve(entry.target);
             }
           });
         }, { threshold: 0.5 });
-        circles.forEach(function(circle) { circleObserver.observe(circle); });
+        circles.forEach(function (circle) { circleObserver.observe(circle); });
 
-        var cardObserver = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
+        var cardObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
             if (entry.isIntersecting) {
               entry.target.classList.add('visible');
               cardObserver.unobserve(entry.target);
             }
           });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        cards.forEach(function(card) { cardObserver.observe(card); });
+        cards.forEach(function (card) { cardObserver.observe(card); });
       }
 
       if (document.readyState === 'loading') {
@@ -1600,18 +3156,18 @@
        Section 08 — CTA + Footer JS
        ================================================ -->
   <script>
-    (function() {
+    (function () {
       var ctaBtn = document.querySelector('#cta .cta-btn');
       if (ctaBtn) {
-        ctaBtn.addEventListener('click', function(e) {
+        ctaBtn.addEventListener('click', function (e) {
           var target = document.querySelector(ctaBtn.getAttribute('href'));
           if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
         });
       }
 
       var footerLinks = document.querySelectorAll('#footer a[href^="#"]');
-      footerLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
+      footerLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
           var targetId = link.getAttribute('href');
           if (targetId && targetId !== '#') {
             var target = document.querySelector(targetId);
@@ -1623,4 +3179,5 @@
   </script>
 
 </body>
+
 </html>
