@@ -295,17 +295,18 @@
       list-style: none;
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 24px;
       margin: 0;
       padding: 0;
     }
 
     #navbar .navbar-nav a {
       font-family: var(--font-body);
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1px;
       font-weight: 500;
+      white-space: nowrap;
       color: var(--color-white);
       text-decoration: none;
       transition: color var(--transition-default);
@@ -1757,6 +1758,68 @@
       }
     }
 
+    /* About wrapper — unified dark section */
+    #about {
+      padding: 0;
+      scroll-margin-top: 80px;
+      background: var(--color-primary-dark);
+    }
+
+    /* Founder on dark */
+    #about #founder {
+      background: transparent;
+    }
+
+    #about #founder .founder-heading,
+    #about #founder .founder-quote-text {
+      color: var(--color-white);
+    }
+
+    #about #founder .founder-paragraph {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    #about #founder .founder-signature {
+      color: var(--color-white);
+    }
+
+    #about #founder .founder-image-wrapper img {
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Purpose on dark */
+    #about #brand-story {
+      background: transparent;
+      padding-top: 0;
+    }
+
+    #about #brand-story .section-heading {
+      color: var(--color-white);
+    }
+
+    #about #brand-story .brand-paragraph {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Values — already dark-styled, just remove duplicate bg */
+    #about #values {
+      background: transparent;
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+
+    @media (max-width: 768px) {
+      #about #values {
+        padding-bottom: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #about #values {
+        padding-bottom: 60px;
+      }
+    }
+
     /* ================================================
        SECTION 07 - Contact
        ================================================ */
@@ -2284,11 +2347,11 @@
       </a>
       <nav class="navbar-nav">
         <ul>
+          <li><a href="#why-us">Why Guidestone</a></li>
           <li><a href="#pathway">Your Journey</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#coverage">Where We Buy</a></li>
-          <li><a href="#founder">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
       <a href="#contact" class="btn-primary navbar-cta navbar-cta-desktop">Book
@@ -2301,11 +2364,11 @@
       </div>
       <div class="mobile-overlay">
         <ul>
+          <li><a href="#why-us">Why Guidestone</a></li>
           <li><a href="#pathway">Your Journey</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#coverage">Where We Buy</a></li>
-          <li><a href="#founder">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
         <a href="#contact" class="btn-primary mobile-cta">Book a Strategy
           Call</a>
@@ -2332,31 +2395,6 @@
       </div>
       <div class="scroll-indicator">
         <i class="fas fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <!-- ================================================
-         Brand Story
-         ================================================ -->
-    <section id="brand-story" class="section">
-      <div class="container">
-        <div class="brand-story-inner">
-          <div class="brand-icon fade-in-up"><i
-              class="fas fa-house-chimney"></i></div>
-          <p class="overline fade-in-up">OUR PURPOSE</p>
-          <h2 class="section-heading fade-in-up">Why Guidestone Property Exists
-          </h2>
-          <p class="brand-paragraph fade-in-up">Property decisions shape
-            financial futures - but the path is often unclear and stressful.
-            Guidestone Property was created to bring structure, insight, and
-            confidence to that journey. Like a guiding marker that shows the way
-            forward, we help our clients move with clarity, strategy, and
-            certainty toward long-term wealth.</p>
-          <p class="brand-paragraph fade-in-up">From first home buyers to
-            seasoned investors, we bring the strategy,
-            research, and hands-on expertise needed to secure the right property
-            - so you can move forward with clarity and confidence.</p>
-        </div>
       </div>
     </section>
 
@@ -2766,91 +2804,129 @@
     </section>
 
     <!-- ================================================
-         Founder Story
+         About (Founder + Purpose + Values)
          ================================================ -->
-    <section id="founder" class="section">
-      <div class="container">
-        <div class="founder-grid">
-          <div class="founder-image-col">
-            <div class="founder-image-wrapper fade-in-up">
-              <img src="images/founder-sonal.jpeg"
-                alt="Sonal, Founder of Guidestone Property" loading="lazy"
-                decoding="async">
-            </div>
-          </div>
-          <div class="founder-content-col">
-            <p class="overline fade-in-up">Meet the Founder</p>
-            <h2 class="section-heading founder-heading fade-in-up">Sonal &mdash;
-              Founder, Guidestone Property</h2>
-            <div class="founder-quote fade-in-up">
-              <i class="fas fa-quote-left founder-quote-icon"></i>
-              <p class="founder-quote-text">Property has always been more than
-                just an investment to me &mdash; it&rsquo;s a powerful tool to
-                create freedom, security, and long-term wealth.</p>
-            </div>
-            <p class="founder-paragraph fade-in-up">My journey into property
-              began as an investor, driven by the belief that property can build
-              long-term wealth and financial freedom. I stepped into the market
-              myself, building a portfolio through buy-and-hold, renovations,
-              subdivisions, and cash flow investing.</p>
-            <p class="founder-paragraph fade-in-up">Over three years in real
-              estate, I&rsquo;ve helped many clients secure investment
-              properties aligned with their long-term goals &mdash; many
-              returning to build further on their portfolios. This experience
-              inspired Guidestone Property: a buyers agency dedicated to guiding
-              clients toward smarter property decisions with clarity,
-              confidence, and a strategy-first approach.</p>
-            <span class="founder-signature fade-in-up">&mdash; Sonal</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="about">
 
-    <!-- ================================================
-         Core Values
-         ================================================ -->
-    <section id="values" class="section" style="padding: 80px 0;">
-      <div class="container">
-        <div class="values-header text-center fade-in-up">
-          <p class="overline">Our Values</p>
-          <h2 class="section-heading">What We Stand For</h2>
-        </div>
-        <div class="values-scroll-wrapper">
-          <div class="values-row fade-in-up" data-delay="150">
-            <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-shield-halved"></i>
+      <!-- Subsection: Meet the Founder -->
+      <div id="founder" class="section">
+        <div class="container">
+          <div class="founder-grid">
+            <div class="founder-image-col">
+              <div class="founder-image-wrapper fade-in-up">
+                <img src="images/founder-sonal.jpeg"
+                  alt="Sonal, Founder of Guidestone Property" loading="lazy"
+                  decoding="async">
               </div>
-              <h3 class="value-card-title">Integrity First</h3>
-              <p class="value-card-desc">Every recommendation backed by honesty
-                and transparency.</p>
             </div>
-            <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-database"></i></div>
-              <h3 class="value-card-title">Research-Led</h3>
-              <p class="value-card-desc">Data drives every step of your property
-                journey.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-user-check"></i>
+            <div class="founder-content-col">
+              <p class="overline fade-in-up">Meet the Founder</p>
+              <h2 class="section-heading founder-heading fade-in-up">Sonal
+                &mdash;
+                Founder, Guidestone Property</h2>
+              <div class="founder-quote fade-in-up">
+                <i class="fas fa-quote-left founder-quote-icon"></i>
+                <p class="founder-quote-text">Property has always been more than
+                  just an investment to me &mdash; it&rsquo;s a powerful tool to
+                  create freedom, security, and long-term wealth.</p>
               </div>
-              <h3 class="value-card-title">Client-First</h3>
-              <p class="value-card-desc">Your goals guide our strategy.</p>
-            </div>
-            <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-spa"></i></div>
-              <h3 class="value-card-title">Calm &amp; Guided</h3>
-              <p class="value-card-desc">Reducing stress, increasing clarity.
-              </p>
-            </div>
-            <div class="value-card">
-              <div class="value-card-icon"><i class="fas fa-seedling"></i></div>
-              <h3 class="value-card-title">Wealth Focused</h3>
-              <p class="value-card-desc">Your future success is our priority.
-              </p>
+              <p class="founder-paragraph fade-in-up">My journey into property
+                began as an investor, driven by the belief that property can
+                build
+                long-term wealth and financial freedom. I stepped into the
+                market
+                myself, building a portfolio through buy-and-hold, renovations,
+                subdivisions, and cash flow investing.</p>
+              <p class="founder-paragraph fade-in-up">Over three years in real
+                estate, I&rsquo;ve helped many clients secure investment
+                properties aligned with their long-term goals &mdash; many
+                returning to build further on their portfolios. This experience
+                inspired Guidestone Property: a buyers agency dedicated to
+                guiding
+                clients toward smarter property decisions with clarity,
+                confidence, and a strategy-first approach.</p>
+              <span class="founder-signature fade-in-up">&mdash; Sonal</span>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Subsection: Our Purpose -->
+      <div id="brand-story" class="section">
+        <div class="container">
+          <div class="brand-story-inner">
+            <div class="brand-icon fade-in-up"><i
+                class="fas fa-house-chimney"></i></div>
+            <p class="overline fade-in-up">OUR PURPOSE</p>
+            <h2 class="section-heading fade-in-up">Why Guidestone Property
+              Exists
+            </h2>
+            <p class="brand-paragraph fade-in-up">Property decisions shape
+              financial futures - but the path is often unclear and stressful.
+              Guidestone Property was created to bring structure, insight, and
+              confidence to that journey. Like a guiding marker that shows the
+              way
+              forward, we help our clients move with clarity, strategy, and
+              certainty toward long-term wealth.</p>
+            <p class="brand-paragraph fade-in-up">From first home buyers to
+              seasoned investors, we bring the strategy,
+              research, and hands-on expertise needed to secure the right
+              property
+              - so you can move forward with clarity and confidence.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subsection: Our Values -->
+      <div id="values" class="section">
+        <div class="container">
+          <div class="values-header text-center fade-in-up">
+            <p class="overline">Our Values</p>
+            <h2 class="section-heading">What We Stand For</h2>
+          </div>
+          <div class="values-scroll-wrapper">
+            <div class="values-row fade-in-up" data-delay="150">
+              <div class="value-card">
+                <div class="value-card-icon"><i
+                    class="fas fa-shield-halved"></i>
+                </div>
+                <h3 class="value-card-title">Integrity First</h3>
+                <p class="value-card-desc">Every recommendation backed by
+                  honesty
+                  and transparency.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-card-icon"><i class="fas fa-database"></i>
+                </div>
+                <h3 class="value-card-title">Research-Led</h3>
+                <p class="value-card-desc">Data drives every step of your
+                  property
+                  journey.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-card-icon"><i class="fas fa-user-check"></i>
+                </div>
+                <h3 class="value-card-title">Client-First</h3>
+                <p class="value-card-desc">Your goals guide our strategy.</p>
+              </div>
+              <div class="value-card">
+                <div class="value-card-icon"><i class="fas fa-spa"></i></div>
+                <h3 class="value-card-title">Calm &amp; Guided</h3>
+                <p class="value-card-desc">Reducing stress, increasing clarity.
+                </p>
+              </div>
+              <div class="value-card">
+                <div class="value-card-icon"><i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="value-card-title">Wealth Focused</h3>
+                <p class="value-card-desc">Your future success is our priority.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
 
@@ -2969,7 +3045,7 @@
             <li><a href="#pathway">Your Journey</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#coverage">Where We Buy</a></li>
-            <li><a href="#founder">About Sonal</a></li>
+            <li><a href="#about">About Sonal</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
