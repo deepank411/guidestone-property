@@ -257,33 +257,15 @@
       color: var(--color-primary-accent);
     }
 
-    #navbar .navbar-logo:hover .logo-main,
-    #navbar .navbar-logo:hover .logo-sub {
-      color: var(--color-primary-accent);
+    #navbar .navbar-logo:hover .logo-img {
+      opacity: 0.85;
     }
 
-    #navbar .logo-main {
-      font-family: var(--font-heading);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--color-white);
-      letter-spacing: 2px;
-      transition: color var(--transition-default);
-    }
-
-    #navbar .logo-diamond {
-      color: var(--color-primary-accent);
-      margin: 0 6px;
-      font-size: 22px;
-    }
-
-    #navbar .logo-sub {
-      font-family: var(--font-heading);
-      font-size: 22px;
-      font-weight: 400;
-      color: var(--color-white);
-      letter-spacing: 2px;
-      transition: color var(--transition-default);
+    #navbar .logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+      transition: opacity var(--transition-default);
     }
 
     #navbar .navbar-nav {
@@ -2279,9 +2261,7 @@
   <header id="navbar" class="navbar">
     <div class="navbar-inner">
       <a href="#hero" class="navbar-logo">
-        <span class="logo-main">GUIDESTONE</span>
-        <span class="logo-diamond">&#9670;</span>
-        <span class="logo-sub">PROPERTY</span>
+        <img src="images/logo.png" alt="Guidestone Property" class="logo-img">
       </a>
       <nav class="navbar-nav">
         <ul>
@@ -2784,7 +2764,7 @@
             <h2 class="section-heading founder-heading fade-in-up">Sonal &mdash;
               Founder, Guidestone Property</h2>
             <div class="founder-quote fade-in-up">
-              <i class="fas fa-quote-left founder-quote-icon"></i>
+              <!-- <i class="fas fa-quote-left founder-quote-icon"></i> -->
               <p class="founder-quote-text">Property has always been more than
                 just an investment to me &mdash; it&rsquo;s a powerful tool to
                 create freedom, security, and long-term wealth.</p>
@@ -3005,11 +2985,11 @@
         <div class="footer-bottom-inner">
           <p class="footer-copyright">&copy; 2026 Guidestone Property. All
             rights reserved.</p>
-          <p class="footer-legal">
+          <!-- <p class="footer-legal">
             <a href="#">Privacy Policy</a>
             <span class="separator">|</span>
             <a href="#">Terms of Service</a>
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
