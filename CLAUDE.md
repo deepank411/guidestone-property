@@ -18,7 +18,7 @@ Guidestone Property is a single-page marketing website for an Australian buyer's
 ## Design System
 
 - **Colors:** Navy `#1a2332`, Gold `#c8a45c`, Slate `#2c3e50`, Off-white `#f8f6f1`, defined as CSS custom properties on `:root`
-- **Fonts:** Playfair Display (headings via `--font-heading`), Inter (body via `--font-body`) — loaded from Google Fonts
+- **Fonts:** Square721 BT Roman Display (headings via `--font-heading`), Montserrat (body via `--font-body`) — loaded from Google Fonts
 - **Icons:** Font Awesome 6.5.1 via CDN
 - **Shared CSS classes:** `.section`, `.container`, `.overline`, `.section-heading`, `.section-subtext`, `.text-center`, `.btn-primary`, `.btn-secondary`, `.fade-in-up`
 
